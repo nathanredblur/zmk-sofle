@@ -114,7 +114,7 @@ layers:
   - Ctl+Alt+$$mdi:arrow-left-bold$$
   - Ctl+$$mdi:arrow-left-bold$$
   - Ctl+$$mdi:arrow-right-bold$$
-  - {t: 'Alt+Ctl+$$mdi:arrow-right-bold$$', h: toggle}
+  - Alt+Ctl+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:volume-off$$
