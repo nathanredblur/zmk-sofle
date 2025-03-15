@@ -42,11 +42,11 @@
     };
 
     macros {
-        spanish_n: spanish_n {
+        emoji_test: emoji_test {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(N) &kp N>;
-            label = "SPANISH_N";
+            bindings = <&kp LEFT_ALT &kp KP_N6 &kp KP_N4>;
+            label = "EMOJI_TEST";
         };
     };
 
@@ -55,11 +55,11 @@
 
         base {
             bindings = <
-&kp ESCAPE           &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6         &kp N7     &kp N8     &kp N9            &kp N0             &kp MINUS
-&kp GRAVE            &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y          &kp U      &kp I      &kp O             &kp P              &kp EQUAL
-&mt LEFT_SHIFT TAB   &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H          &kp J      &kp K      &kp L             &kp SEMI           &mt RIGHT_SHIFT APOS
-&mt CAPS LEFT_SHIFT  &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N          &kp M      &kp COMMA  &kp DOT           &kp FSLH           &kp BACKSLASH
-&kp C_MUTE           &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 1   &kp ENTER    &kp ENTER        &kp BACKSPACE  &kp SPACE  &mo 2      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&mt CAPSLOCK ESCAPE  &kp N1     &kp N2        &kp N3        &kp N4  &kp N5              &kp UP_ARROW     &kp N6         &kp N7     &kp N8     &kp N9            &kp N0             &kp MINUS
+&kp GRAVE            &kp Q      &kp W         &kp E         &kp R   &kp T               &kp DOWN_ARROW   &kp Y          &kp U      &kp I      &kp O             &kp P              &mt LA(E) EQUAL
+&kp TAB              &kp A      &kp S         &kp D         &kp F   &kp G               &kp LEFT_ARROW   &kp H          &kp J      &kp K      &kp L             &kp SEMI           &kp APOS
+&kp LEFT_SHIFT       &kp Z      &kp X         &kp C         &kp V   &kp B               &kp RIGHT_ARROW  &kp N          &kp M      &kp COMMA  &kp DOT           &kp FSLH           &mt RIGHT_SHIFT BACKSLASH
+&kp C_MUTE           &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 1   &mt ESCAPE ENTER    &kp ENTER        &kp BACKSPACE  &kp SPACE  &mo 2      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -68,11 +68,11 @@
 
         nav {
             bindings = <
-&trans      &kp F1  &kp F2     &kp F3     &kp F4     &kp F5      &mmv MOVE_UP     &kp F6            &kp F7        &kp F8         &kp F9             &kp F10  &kp F11
-&trans      &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB4    &mmv MOVE_DOWN   &kp HOME          &kp PAGE_UP   &kp PAGE_DOWN  &kp END            &trans   &kp F12
-&trans      &trans  &trans     &trans     &trans     &mkp MB5    &mmv MOVE_LEFT   &kp LEFT          &kp UP_ARROW  &kp DOWN       &kp RIGHT          &trans   &kp INS
-&trans      &trans  &trans     &trans     &trans     &trans      &mmv MOVE_RIGHT  &kp LC(LA(LEFT))  &trans        &trans         &kt LA(LC(RIGHT))  &trans   &kp DEL
-&kp C_MUTE  &trans  &trans     &trans     &trans     &trans      &mkp LCLK        &trans            &trans        &trans         &trans             &trans
+&trans      &kp F1          &kp F2            &kp F3                &kp F4                                     &kp F5      &mmv MOVE_UP     &kp F6            &kp F7              &kp F8         &kp F9             &kp F10  &kp F11
+&trans      &trans          &mkp LCLK         &mkp MCLK             &mkp RCLK                                  &mkp MB4    &mmv MOVE_DOWN   &kp HOME          &kp PAGE_UP         &kp PAGE_DOWN  &kp END            &trans   &kp F12
+&trans      &kp F13         &kp LS(LG(N5))    &kp LS(LG(NUMBER_3))  &mt LG(LS(LC(NUMBER_4))) LS(LG(NUMBER_4))  &mkp MB5    &mmv MOVE_LEFT   &kp LEFT          &kp UP_ARROW        &kp DOWN       &kp RIGHT          &trans   &kp INS
+&trans      &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT          &sk LEFT_GUI                               &trans      &mmv MOVE_RIGHT  &kp LC(LA(LEFT))  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)  &kt LA(LC(RIGHT))  &trans   &kp DEL
+&kp C_MUTE  &trans          &trans            &trans                &trans                                     &trans      &mkp LCLK        &trans            &trans              &trans         &trans             &trans
             >;
 
             display-name = "Navigation";
@@ -81,11 +81,11 @@
 
         Actions {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &spanish_n  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &trans          &trans      &trans    &trans  &emoji_test  &trans           &trans           &trans           &trans           &trans
+&trans  &trans  &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &trans    &trans  &trans       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans           &trans
+&trans  &trans  &trans            &trans          &trans      &trans    &trans  &trans       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans
+&trans  &trans  &trans            &trans          &trans      &trans    &trans  &trans       &kp KP_N1        &kp KP_NUMBER_2  &kp KP_N3        &trans           &trans
+&trans  &trans  &trans            &trans          &trans      &trans    &trans  &trans       &trans           &trans           &trans           &trans
             >;
         };
 
@@ -98,7 +98,7 @@
 &trans           &trans           &trans           &trans        &trans        &trans          &mkp LCLK        &trans  &trans  &trans      &trans     &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
     };
 
