@@ -94,8 +94,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - F13
   - {t: Sft+Gui+5, s: Sft+Gui+%}
-  - Sft+Gui+3
-  - {t: Sft+Gui+4, h: Gui+Sft+Ctl+4}
+  - {t: Sft+Gui+3, s: Sft+Gui+#}
+  - {t: Sft+Gui+4, h: Gui+Sft+Ctl+4, s: Sft+Gui+$}
   - '&mkp MB5'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:arrow-left-bold$$
@@ -145,8 +145,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - PLAY PAUSE
-  - PREVIOUS
+  - $$mdi:play-pause$$
+  - $$mdi:skip-previous$$
   - $$mdi:skip-next$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -196,11 +196,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   Sys:
   - $$mdi:bluetooth-off$$
-  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '4', s: '$$mdi:bluetooth-connect$$'}
-  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
+  - {t: '$$mdi:bluetooth-connect$$', s: '1'}
+  - {t: '$$mdi:bluetooth-connect$$', s: '2'}
+  - {t: '$$mdi:bluetooth-connect$$', s: '3'}
+  - {t: '$$mdi:bluetooth-connect$$', s: '4'}
+  - {t: '$$mdi:bluetooth-connect$$', s: '5'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - F6
   - F7
@@ -221,9 +221,9 @@ layers:
   - F12
   - _
   - +
-  - RGB TOG
-  - RGB EFF
-  - RGB EFR
+  - $$mdi:led-on$$
+  - {t: '$$mdi:palette$$', s: '$$mdi:menu-right$$'}
+  - {t: '$$mdi:palette$$', s: '$$mdi:menu-left$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -234,9 +234,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '{'
   - '}'
-  - RGB SPI
-  - RGB BRI
-  - RGB BRD
+  - {t: '$$mdi:speedometer$$', s: '$$mdi:fast-forward$$'}
+  - $$mdi:brightness-5$$
+  - $$mdi:brightness-3$$
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}

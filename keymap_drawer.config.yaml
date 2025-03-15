@@ -1,97 +1,123 @@
 draw_config:
+  # Layout structure
   n_columns: 1
+  key_w: 70.0                 # Wider keys for better readability
+  key_h: 65.0                 # Taller keys for better spacing
+  split_gap: 40.0             # Increased split gap for clarity
+  key_rx: 8.0                 # Increased corner radius
+  key_ry: 8.0                 # Increased corner radius
+  
+  # Padding and spacing
+  inner_pad_w: 3.0            # More inner padding
+  inner_pad_h: 3.0            # More inner padding
+  outer_pad_w: 50.0           # More outer padding
+  outer_pad_h: 65.0           # More outer padding
+  line_spacing: 1.4           # Increased line spacing
+  
+  # Visual elements
   draw_key_sides: true
-  key_w: 60.0
-  key_h: 56.0
-  split_gap: 30.0
-  combo_w: 28.0
-  combo_h: 26.0
-  key_rx: 6.0
-  key_ry: 6.0
-  inner_pad_w: 2.0
-  inner_pad_h: 2.0
-  outer_pad_w: 40.0
-  outer_pad_h: 56.0
-  line_spacing: 1.2
-  arc_radius: 6.0
+  combo_w: 32.0               # Wider combos
+  combo_h: 30.0               # Taller combos
+  arc_radius: 8.0             # Smoother arcs
+  small_pad: 3.0              # Increased small padding
   append_colon_to_layer_header: true
-  small_pad: 2.0
+  shrink_wide_legends: 6
+  
+  # Glyph sizes
+  glyph_tap_size: 22          # Larger tap glyphs
+  glyph_hold_size: 18         # Larger hold glyphs
+  glyph_shifted_size: 18      # Larger shifted glyphs
+
+  # SVG styling
   svg_extra_style: |
     /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
 
-    svg.keymap {
-      font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
-      font-size: 12px;
-      font-weight: bold;
-      text-rendering: optimizeLegibility;
-    }
-
-    /* Color accent for held keys */
+    /* Held keys highlighting */
     rect.held, rect.combo.held {
-        fill: #ffc;
+      fill: #e6f2ff;           /* Light blue for held keys */
+      stroke: #1a73e8;         /* Blue border for held keys */
     }
 
-    /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
+    /* Tap symbols */
     .sym_sub_text.tap {
-      translate: -5px 2px;
+      translate: -6px 2px;
+      font-size: 22px;         /* Larger tap text */
+    }
+    
+    /* Shifted symbols */
+    .sym_sub_text.shifted {
+      translate: 12px 14px;
+      font-size: 12px;
+      opacity: 1.0;
+      fill: #0066cc;           /* Blue for shifted text */
+    }
+    
+    /* Combo tap symbols */
+    .combo.sym_sub_text.tap {
+      translate: -2px 1px;
       font-size: 20px;
     }
-    .sym_sub_text.shifted {
-      translate: 10px 13px;
-      font-size: 10px;
-      opacity: 1.0;
-    }
-    .combo.sym_sub_text.tap {
-      translate: -1px 1px;
-    }
+    
+    /* Combo shifted symbols */
     .combo.sym_sub_text.shifted {
-      translate: 7px 5px;
-      font-size: 10px;
+      translate: 8px 6px;
+      font-size: 11px;
       opacity: 1.0;
+      fill: #0066cc;
     }
 
-    /* Toggle */
+    /* Toggle styling */
     .toggle.shifted {
-      translate: -10px 12px;
+      translate: -11px 13px;
+      fill: #cc6600;           /* Orange for toggle shifted */
     }
 
     .toggle.hold {
-      translate: 13px -23px;
+      translate: 14px -24px;
+      fill: #006633;           /* Green for toggle hold */
     }
 
-    /* Variant for tap-dances */
+    /* Tap dance styling */
     .tap_dance.tap {
-      translate: -7px 0px;
-      font-size: 12px;
+      translate: -8px 0px;
+      font-size: 14px;
     }
+    
     .tap_dance.shifted {
-      translate: 7px 17px;
+      translate: 8px 18px;
+      font-size: 14px;
+      opacity: 1.0;
+      fill: #9900cc;           /* Purple for tap dance shifted */
+    }
+
+    /* Symbol by symbol styling */
+    .sym_by_sym.tap {
+      translate: -7px 0px;
+      font-size: 14px;
+    }
+    
+    .sym_by_sym.shifted {
+      translate: 11px 13px;
       font-size: 12px;
       opacity: 1.0;
+      fill: #cc0066;           /* Pink for sym_by_sym shifted */
     }
 
-    /* Variant for symbol next to symbol */
-    .sym_by_sym.tap {
-      translate: -6px 0px;
-    }
-    .sym_by_sym.shifted {
-      translate: 10px 12px;
-      opacity: 1.0;
-    }
-
+    /* Combo symbol by symbol */
     .combo.sym_by_sym.tap {
-      translate: -35px 0px;
+      translate: -36px 0px;
     }
+    
     .combo.sym_by_sym.shifted {
-      translate: 35px 20px;
+      translate: 36px 21px;
       opacity: 1.0;
     }
 
+    /* Hide hold box for combo sym_by_sym */
     .combo.sym_by_sym.hold {
       visibility: hidden;
     }
-
-    /* hide hold box for combo sym_by_sym */
+    
     .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
       visibility: hidden;
     }
@@ -133,6 +159,42 @@ parse_config:
     "&ltq 1 DELETE":
       tap: $$mdi:backspace-reverse-outline$$
       hold: $$mdi:navigation-variant$$
+    
+    # Screenshot shortcuts
+    "&kp LG(LS(N3))":
+      tap: $$mdi:ocr$$
+      shifted: "Shift+Cmd+3"
+    "&kp LG(LS(N4))":
+      tap: $$mdi:crop-free$$
+      shifted: "Shift+Cmd+4"
+    "&kp LG(LS(N5))":
+      tap: $$mdi:camera$$
+      shifted: "Shift+Cmd+5"
+    "&kp LG(LC(LS(N4)))":
+      tap: $$mdi:clipboard-arrow-up$$
+      shifted: "Shift+Cmd+Ctrl+4"
+      
+    # RGB Controls
+    "&rgb_ug RGB_TOG":
+      tap: $$mdi:led-on$$
+    "&rgb_ug RGB_ON":
+      tap: $$mdi:led-on$$
+    "&rgb_ug RGB_OFF":
+      tap: $$mdi:led-off$$
+    "&rgb_ug RGB_EFF":
+      tap: $$mdi:palette$$
+      shifted: $$mdi:menu-right$$
+    "&rgb_ug RGB_EFR":
+      tap: $$mdi:palette$$
+      shifted: $$mdi:menu-left$$
+    "&rgb_ug RGB_SPI":
+      tap: $$mdi:speedometer$$
+      shifted: $$mdi:fast-forward$$
+    "&rgb_ug RGB_BRI":
+      tap: $$mdi:brightness-5$$
+    "&rgb_ug RGB_BRD":
+      tap: $$mdi:brightness-3$$
+      
     # Home rows
     "&hm LEFT_GUI A":
       tap: 'A'
@@ -155,10 +217,12 @@ parse_config:
     "&hm RIGHT_ALT L":
       tap: 'L'
       shifted: $$mdi:apple-keyboard-option$$
+    
     # self behaviors
     "&hm LG(LS(V)) P":
       tap: 'P'
       shifted: $$mdi:content-copy$$
+    
     # Mouse
     "&msc SCRL_UP":
       tap: $$mdi:pan-up$$
@@ -198,7 +262,8 @@ parse_config:
       tap: $$mdi:mouse-right-click-outline$$
     "&mkp MCLK":
       tap: $$mdi:mouse-scroll-wheel$$
-    # Modifiers
+   
+   # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
       tap: $$mdi:apple-keyboard-shift$$
@@ -217,25 +282,20 @@ parse_config:
 
     # Bluetooth
     "&bt BT_SEL 0":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 1
+      shifted: 1
+      tap: $$mdi:bluetooth-connect$$ 
     "&bt BT_SEL 1":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 2
+      shifted: 2
+      tap: $$mdi:bluetooth-connect$$ 
     "&bt BT_SEL 2":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 3
+      shifted: 3
+      tap: $$mdi:bluetooth-connect$$ 
     "&bt BT_SEL 3":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 4
+      shifted: 4
+      tap: $$mdi:bluetooth-connect$$ 
     "&bt BT_SEL 4":
-      shifted: $$mdi:bluetooth-connect$$
-      tap: ""
-      hold: 5
+      shifted: 5
+      tap: $$mdi:bluetooth-connect$$ 
     "&out OUT_TOG":
       shifted: $$mdi:usb$$
       tap: $$mdi:toggle-switch$$
@@ -248,6 +308,7 @@ parse_config:
       shifted: $$mdi:bluetooth-connect$$
       tap: ""
       hold: $$mdi:arrow-down-bold$$
+    
     # Reset
     "&sys_reset":
       type: bootloader

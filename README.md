@@ -29,7 +29,7 @@ Date: Jun 19 2021
 
 To draw the keyboard use this command
 ```
-keymap -c ./keymap_drawer.config.yaml parse -z ./boards/arm/eyelash_sofle/eyelash_sofle.keymap > ./keymap-drawer/eyelash_sofle.yaml
+keymap -c ./keymap_drawer.config.yaml parse -z ./config/eyelash_sofle.keymap > ./keymap-drawer/eyelash_sofle.yaml
 
 keymap -c ./keymap_drawer.config.yaml draw ./keymap-drawer/eyelash_sofle.yaml -j ./config/eyelash_sofle.json > ./keymap-drawer/eyelash_sofle.svg
 ```
