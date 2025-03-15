@@ -27,6 +27,13 @@ Date: Jun 19 2021
 - https://en.key-test.ru/
 - https://keymap-drawer.streamlit.app/
 
+To draw the keyboard use this command
+```
+keymap -c ./keymap_drawer.config.yaml parse -z ./boards/arm/eyelash_sofle/eyelash_sofle.keymap > ./keymap-drawer/eyelash_sofle.yaml
+
+keymap -c ./keymap_drawer.config.yaml draw ./keymap-drawer/eyelash_sofle.yaml -j ./config/eyelash_sofle.json > ./keymap-drawer/eyelash_sofle.svg
+```
+
 # Resources to practice
 
 - https://www.edclub.com/sportal/program-3.game
