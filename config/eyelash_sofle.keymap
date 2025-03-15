@@ -71,7 +71,7 @@
 &trans      &kp F1          &kp F2            &kp F3                &kp F4                                     &kp F5      &mmv MOVE_UP     &kp F6            &kp F7              &kp F8         &kp F9             &kp F10  &kp F11
 &trans      &trans          &mkp LCLK         &mkp MCLK             &mkp RCLK                                  &mkp MB4    &mmv MOVE_DOWN   &kp HOME          &kp PAGE_UP         &kp PAGE_DOWN  &kp END            &trans   &kp F12
 &trans      &kp F13         &kp LS(LG(N5))    &kp LS(LG(NUMBER_3))  &mt LG(LS(LC(NUMBER_4))) LS(LG(NUMBER_4))  &mkp MB5    &mmv MOVE_LEFT   &kp LEFT          &kp UP_ARROW        &kp DOWN       &kp RIGHT          &trans   &kp INS
-&trans      &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT          &sk LEFT_GUI                               &trans      &mmv MOVE_RIGHT  &kp LC(LA(LEFT))  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)  &kt LA(LC(RIGHT))  &trans   &kp DEL
+&trans      &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT          &sk LEFT_GUI                               &trans      &mmv MOVE_RIGHT  &kp LC(LA(LEFT))  &kp LC(LEFT_ARROW)  &kp LC(RIGHT)  &kp LA(LC(RIGHT))  &trans   &kp DEL
 &kp C_MUTE  &trans          &trans            &trans                &trans                                     &trans      &mkp LCLK        &trans            &trans              &trans         &trans             &trans
             >;
 
