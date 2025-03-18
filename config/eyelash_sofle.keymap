@@ -54,11 +54,9 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&to 1 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(35,100,53)>,
-                <&macro_wait_time 1000>,
-                <&rgb_ug RGB_OFF>,
+                <&mo 1 &rgb_ug RGB_ON &rgb_ug RGB_COLOR_HSB(35,100,53)>,
                 <&macro_release>,
-                <&to 0>;
+                <&rgb_ug RGB_OFF>;
 
             label = "COLORS_LAYER1";
         };
