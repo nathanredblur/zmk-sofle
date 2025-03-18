@@ -94,9 +94,9 @@ layers:
   - F12
   - {t: '$$mdi:transfer$$', type: trans}
   - F13
-  - {t: '$$mdi:camera$$', s: '$$mdi:clipboard-outline$$'}
+  - $$mdi:camera$$
   - $$mdi:ocr$$
-  - $$mdi:crop-free$$
+  - {t: '$$mdi:crop-free$$', s: '$$mdi:clipboard-outline$$'}
   - $$mdi:mouse-move-down$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:arrow-left-bold$$
