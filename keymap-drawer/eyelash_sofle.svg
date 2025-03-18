@@ -817,20 +817,22 @@ path.combo {
 <text x="0" y="-34" class="key shifted">}</text>
 </g>
 <g class="combo combopos-0">
-<path d="M440,210 l0,-53" class="combo"/>
-<path d="M440,210 l0,53" class="combo"/>
-<rect rx="4" ry="4" x="423" y="193" width="34" height="34" class="combo"/>
+<path d="M493,210 v-74 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
+<path d="M493,210 l-26,0" class="combo"/>
+<path d="M493,210 v74 a6.0,6.0 0 0 1 -6.0,6.0 h-20" class="combo"/>
+<rect rx="4" ry="4" x="476" y="193" width="34" height="34" class="combo"/>
 <a href="#Sys">
-<text x="440" y="210" class="combo tap layer-activator">Sys</text>
-</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="432" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+<text x="493" y="210" class="combo tap layer-activator">Sys</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="485" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 <g class="combo combopos-1">
-<path d="M880,210 l0,-53" class="combo"/>
-<path d="M880,210 l0,53" class="combo"/>
-<rect rx="4" ry="4" x="863" y="193" width="34" height="34" class="combo"/>
+<path d="M827,210 v-74 a6.0,6.0 0 0 1 6.0,-6.0 h20" class="combo"/>
+<path d="M827,210 l26,0" class="combo"/>
+<path d="M827,210 v74 a6.0,6.0 0 0 0 6.0,6.0 h20" class="combo"/>
+<rect rx="4" ry="4" x="810" y="193" width="34" height="34" class="combo"/>
 <a href="#Sys">
-<text x="880" y="210" class="combo tap layer-activator">Sys</text>
-</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="872" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+<text x="827" y="210" class="combo tap layer-activator">Sys</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="819" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 </g>
 </g>
@@ -1104,20 +1106,22 @@ path.combo {
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g class="combo combopos-0">
-<path d="M440,210 l0,-53" class="combo"/>
-<path d="M440,210 l0,53" class="combo"/>
-<rect rx="4" ry="4" x="423" y="193" width="34" height="34" class="combo"/>
+<path d="M493,210 v-74 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
+<path d="M493,210 l-26,0" class="combo"/>
+<path d="M493,210 v74 a6.0,6.0 0 0 1 -6.0,6.0 h-20" class="combo"/>
+<rect rx="4" ry="4" x="476" y="193" width="34" height="34" class="combo"/>
 <a href="#Sys">
-<text x="440" y="210" class="combo tap layer-activator">Sys</text>
-</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="432" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+<text x="493" y="210" class="combo tap layer-activator">Sys</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="485" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 <g class="combo combopos-1">
-<path d="M880,210 l0,-53" class="combo"/>
-<path d="M880,210 l0,53" class="combo"/>
-<rect rx="4" ry="4" x="863" y="193" width="34" height="34" class="combo"/>
+<path d="M827,210 v-74 a6.0,6.0 0 0 1 6.0,-6.0 h20" class="combo"/>
+<path d="M827,210 l26,0" class="combo"/>
+<path d="M827,210 v74 a6.0,6.0 0 0 0 6.0,6.0 h20" class="combo"/>
+<rect rx="4" ry="4" x="810" y="193" width="34" height="34" class="combo"/>
 <a href="#Sys">
-<text x="880" y="210" class="combo tap layer-activator">Sys</text>
-</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="872" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+<text x="827" y="210" class="combo tap layer-activator">Sys</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="819" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 </g>
 </g>
@@ -1401,20 +1405,22 @@ path.combo {
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g class="combo combopos-0">
-<path d="M440,210 l0,-53" class="combo"/>
-<path d="M440,210 l0,53" class="combo"/>
-<rect rx="4" ry="4" x="423" y="193" width="34" height="34" class="combo"/>
+<path d="M493,210 v-74 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
+<path d="M493,210 l-26,0" class="combo"/>
+<path d="M493,210 v74 a6.0,6.0 0 0 1 -6.0,6.0 h-20" class="combo"/>
+<rect rx="4" ry="4" x="476" y="193" width="34" height="34" class="combo"/>
 <a href="#Sys">
-<text x="440" y="210" class="combo tap layer-activator">Sys</text>
-</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="432" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+<text x="493" y="210" class="combo tap layer-activator">Sys</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="485" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 <g class="combo combopos-1">
-<path d="M880,210 l0,-53" class="combo"/>
-<path d="M880,210 l0,53" class="combo"/>
-<rect rx="4" ry="4" x="863" y="193" width="34" height="34" class="combo"/>
+<path d="M827,210 v-74 a6.0,6.0 0 0 1 6.0,-6.0 h20" class="combo"/>
+<path d="M827,210 l26,0" class="combo"/>
+<path d="M827,210 v74 a6.0,6.0 0 0 0 6.0,6.0 h20" class="combo"/>
+<rect rx="4" ry="4" x="810" y="193" width="34" height="34" class="combo"/>
 <a href="#Sys">
-<text x="880" y="210" class="combo tap layer-activator">Sys</text>
-</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="872" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+<text x="827" y="210" class="combo tap layer-activator">Sys</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="819" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 </g>
 </g>
@@ -1688,20 +1694,22 @@ path.combo {
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g class="combo combopos-0">
-<path d="M440,210 l0,-53" class="combo"/>
-<path d="M440,210 l0,53" class="combo"/>
-<rect rx="4" ry="4" x="423" y="193" width="34" height="34" class="combo"/>
+<path d="M493,210 v-74 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
+<path d="M493,210 l-26,0" class="combo"/>
+<path d="M493,210 v74 a6.0,6.0 0 0 1 -6.0,6.0 h-20" class="combo"/>
+<rect rx="4" ry="4" x="476" y="193" width="34" height="34" class="combo"/>
 <a href="#Sys">
-<text x="440" y="210" class="combo tap layer-activator">Sys</text>
-</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="432" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+<text x="493" y="210" class="combo tap layer-activator">Sys</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="485" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 <g class="combo combopos-1">
-<path d="M880,210 l0,-53" class="combo"/>
-<path d="M880,210 l0,53" class="combo"/>
-<rect rx="4" ry="4" x="863" y="193" width="34" height="34" class="combo"/>
+<path d="M827,210 v-74 a6.0,6.0 0 0 1 6.0,-6.0 h20" class="combo"/>
+<path d="M827,210 l26,0" class="combo"/>
+<path d="M827,210 v74 a6.0,6.0 0 0 0 6.0,6.0 h20" class="combo"/>
+<rect rx="4" ry="4" x="810" y="193" width="34" height="34" class="combo"/>
 <a href="#Sys">
-<text x="880" y="210" class="combo tap layer-activator">Sys</text>
-</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="872" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+<text x="827" y="210" class="combo tap layer-activator">Sys</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="819" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 </g>
 </g>
@@ -1965,20 +1973,22 @@ path.combo {
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g class="combo combopos-0">
-<path d="M440,210 l0,-53" class="combo"/>
-<path d="M440,210 l0,53" class="combo"/>
-<rect rx="4" ry="4" x="423" y="193" width="34" height="34" class="combo"/>
+<path d="M493,210 v-74 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
+<path d="M493,210 l-26,0" class="combo"/>
+<path d="M493,210 v74 a6.0,6.0 0 0 1 -6.0,6.0 h-20" class="combo"/>
+<rect rx="4" ry="4" x="476" y="193" width="34" height="34" class="combo"/>
 <a href="#Sys">
-<text x="440" y="210" class="combo tap layer-activator">Sys</text>
-</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="432" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+<text x="493" y="210" class="combo tap layer-activator">Sys</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="485" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 <g class="combo combopos-1">
-<path d="M880,210 l0,-53" class="combo"/>
-<path d="M880,210 l0,53" class="combo"/>
-<rect rx="4" ry="4" x="863" y="193" width="34" height="34" class="combo"/>
+<path d="M827,210 v-74 a6.0,6.0 0 0 1 6.0,-6.0 h20" class="combo"/>
+<path d="M827,210 l26,0" class="combo"/>
+<path d="M827,210 v74 a6.0,6.0 0 0 0 6.0,6.0 h20" class="combo"/>
+<rect rx="4" ry="4" x="810" y="193" width="34" height="34" class="combo"/>
 <a href="#Sys">
-<text x="880" y="210" class="combo tap layer-activator">Sys</text>
-</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="872" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+<text x="827" y="210" class="combo tap layer-activator">Sys</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="819" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
 </g>
 </g>
 </g>

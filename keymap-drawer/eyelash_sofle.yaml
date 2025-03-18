@@ -1,4 +1,3 @@
-layout: {zmk_keyboard: eyelash_sofle}
 layers:
   BASE:
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-caps$$'}
@@ -328,5 +327,9 @@ layers:
 combos:
 - p: [18, 31, 44]
   k: {t: Sys, h: '$$mdi:gesture-tap-hold$$'}
+  a: right
+  o: 0.15
 - p: [20, 33, 46]
   k: {t: Sys, h: '$$mdi:gesture-tap-hold$$'}
+  a: left
+  o: 0.15
