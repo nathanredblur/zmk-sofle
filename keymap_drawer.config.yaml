@@ -258,10 +258,6 @@ draw_config:
         fill: var(--color--layer--text);
         translate: 0px 23px;
     }
-    .layer-Fn text.label {
-        translate: 581px 164px;
-    }
-
 
     /* Keys */
     rect.key,
