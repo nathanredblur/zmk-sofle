@@ -376,10 +376,6 @@ text.label {
     fill: var(--color--layer--text);
     translate: 0px 23px;
 }
-.layer-Fn text.label {
-    translate: 581px 164px;
-}
-
 
 /* Keys */
 rect.key,
@@ -782,7 +778,7 @@ path.combo {
 </g>
 <g transform="translate(449, 405) rotate(30.0)" class="key keypos-56">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 62%">&amp;colors…</tspan></text>
+<text x="0" y="0" class="key tap">&amp;nav</text>
 </g>
 <g transform="translate(556, 420) rotate(30.0)" class="key keypos-57">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -1114,6 +1110,24 @@ path.combo {
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g class="combo combopos-0">
+<path d="M493,210 v-74 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
+<path d="M493,210 l-26,0" class="combo"/>
+<path d="M493,210 v74 a6.0,6.0 0 0 1 -6.0,6.0 h-20" class="combo"/>
+<rect rx="4" ry="4" x="476" y="193" width="34" height="34" class="combo"/>
+<a href="#Conf">
+<text x="493" y="210" class="combo tap layer-activator">Conf</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="485" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-1">
+<path d="M827,210 v-74 a6.0,6.0 0 0 1 6.0,-6.0 h20" class="combo"/>
+<path d="M827,210 l26,0" class="combo"/>
+<path d="M827,210 v74 a6.0,6.0 0 0 0 6.0,6.0 h20" class="combo"/>
+<rect rx="4" ry="4" x="810" y="193" width="34" height="34" class="combo"/>
+<a href="#Conf">
+<text x="827" y="210" class="combo tap layer-activator">Conf</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="819" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-2">
 <rect rx="4" ry="4" x="983" y="348" width="34" height="34" class="combo"/>
 <a href="#Nav">
 <text x="1000" y="365" class="combo tap layer-activator">Nav</text>
@@ -1175,7 +1189,6 @@ path.combo {
 <g transform="translate(1280, 80)" class="key keypos-12">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <text x="0" y="0" class="key tap">F24</text>
-<text x="0" y="34" class="key hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g transform="translate(40, 160)" class="key trans keypos-13">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
@@ -1401,6 +1414,24 @@ path.combo {
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g class="combo combopos-0">
+<path d="M493,210 v-74 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
+<path d="M493,210 l-26,0" class="combo"/>
+<path d="M493,210 v74 a6.0,6.0 0 0 1 -6.0,6.0 h-20" class="combo"/>
+<rect rx="4" ry="4" x="476" y="193" width="34" height="34" class="combo"/>
+<a href="#Conf">
+<text x="493" y="210" class="combo tap layer-activator">Conf</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="485" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-1">
+<path d="M827,210 v-74 a6.0,6.0 0 0 1 6.0,-6.0 h20" class="combo"/>
+<path d="M827,210 l26,0" class="combo"/>
+<path d="M827,210 v74 a6.0,6.0 0 0 0 6.0,6.0 h20" class="combo"/>
+<rect rx="4" ry="4" x="810" y="193" width="34" height="34" class="combo"/>
+<a href="#Conf">
+<text x="827" y="210" class="combo tap layer-activator">Conf</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="819" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-2">
 <rect rx="4" ry="4" x="983" y="348" width="34" height="34" class="combo"/>
 <a href="#Nav">
 <text x="1000" y="365" class="combo tap layer-activator">Nav</text>
@@ -1684,6 +1715,24 @@ path.combo {
 <use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
 <g class="combo combopos-0">
+<path d="M493,210 v-74 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
+<path d="M493,210 l-26,0" class="combo"/>
+<path d="M493,210 v74 a6.0,6.0 0 0 1 -6.0,6.0 h-20" class="combo"/>
+<rect rx="4" ry="4" x="476" y="193" width="34" height="34" class="combo"/>
+<a href="#Conf">
+<text x="493" y="210" class="combo tap layer-activator">Conf</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="485" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-1">
+<path d="M827,210 v-74 a6.0,6.0 0 0 1 6.0,-6.0 h20" class="combo"/>
+<path d="M827,210 l26,0" class="combo"/>
+<path d="M827,210 v74 a6.0,6.0 0 0 0 6.0,6.0 h20" class="combo"/>
+<rect rx="4" ry="4" x="810" y="193" width="34" height="34" class="combo"/>
+<a href="#Conf">
+<text x="827" y="210" class="combo tap layer-activator">Conf</text>
+</a><use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="819" y="207" height="16" width="16.0" class="combo hold glyph mdi:gesture-tap-hold"/>
+</g>
+<g class="combo combopos-2">
 <rect rx="4" ry="4" x="983" y="348" width="34" height="34" class="combo"/>
 <a href="#Nav">
 <text x="1000" y="365" class="combo tap layer-activator">Nav</text>
