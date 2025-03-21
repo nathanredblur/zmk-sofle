@@ -263,11 +263,7 @@ layers:
 combos:
 - p: [14, 15]
   k: {t: Conf, h: toggle}
-  a: right
-  o: 0.15
 - p: [25, 24]
   k: {t: Conf, h: toggle}
-  a: left
-  o: 0.15
 - p: [61, 62]
   k: {t: Nav, h: toggle}

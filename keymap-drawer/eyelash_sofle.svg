@@ -811,20 +811,16 @@ path.combo {
 <text x="0" y="-34" class="key shifted">}</text>
 </g>
 <g class="combo combopos-0">
-<path d="M253,145 v9 a6.0,6.0 0 0 1 -6.0,6.0 h-100" class="combo"/>
-<path d="M253,145 v-9 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
-<rect rx="4" ry="4" x="236" y="128" width="34" height="34" class="combo"/>
+<rect rx="4" ry="4" x="143" y="128" width="34" height="34" class="combo"/>
 <a href="#Conf">
-<text x="253" y="145" class="combo tap layer-activator">Conf</text>
-</a><text x="253" y="158" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<text x="160" y="145" class="combo tap layer-activator">Conf</text>
+</a><text x="160" y="158" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M1147,160 l106,0" class="combo"/>
-<path d="M1147,160 l26,0" class="combo"/>
-<rect rx="4" ry="4" x="1130" y="143" width="34" height="34" class="combo"/>
+<rect rx="4" ry="4" x="1223" y="143" width="34" height="34" class="combo"/>
 <a href="#Conf">
-<text x="1147" y="160" class="combo tap layer-activator">Conf</text>
-</a><text x="1147" y="173" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<text x="1240" y="160" class="combo tap layer-activator">Conf</text>
+</a><text x="1240" y="173" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g class="combo combopos-2">
 <rect rx="4" ry="4" x="983" y="348" width="34" height="34" class="combo"/>
@@ -1104,20 +1100,16 @@ path.combo {
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g class="combo combopos-0">
-<path d="M253,145 v9 a6.0,6.0 0 0 1 -6.0,6.0 h-100" class="combo"/>
-<path d="M253,145 v-9 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
-<rect rx="4" ry="4" x="236" y="128" width="34" height="34" class="combo"/>
+<rect rx="4" ry="4" x="143" y="128" width="34" height="34" class="combo"/>
 <a href="#Conf">
-<text x="253" y="145" class="combo tap layer-activator">Conf</text>
-</a><text x="253" y="158" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<text x="160" y="145" class="combo tap layer-activator">Conf</text>
+</a><text x="160" y="158" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M1147,160 l106,0" class="combo"/>
-<path d="M1147,160 l26,0" class="combo"/>
-<rect rx="4" ry="4" x="1130" y="143" width="34" height="34" class="combo"/>
+<rect rx="4" ry="4" x="1223" y="143" width="34" height="34" class="combo"/>
 <a href="#Conf">
-<text x="1147" y="160" class="combo tap layer-activator">Conf</text>
-</a><text x="1147" y="173" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<text x="1240" y="160" class="combo tap layer-activator">Conf</text>
+</a><text x="1240" y="173" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g class="combo combopos-2">
 <rect rx="4" ry="4" x="983" y="348" width="34" height="34" class="combo"/>
@@ -1406,20 +1398,16 @@ path.combo {
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
 <g class="combo combopos-0">
-<path d="M253,145 v9 a6.0,6.0 0 0 1 -6.0,6.0 h-100" class="combo"/>
-<path d="M253,145 v-9 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
-<rect rx="4" ry="4" x="236" y="128" width="34" height="34" class="combo"/>
+<rect rx="4" ry="4" x="143" y="128" width="34" height="34" class="combo"/>
 <a href="#Conf">
-<text x="253" y="145" class="combo tap layer-activator">Conf</text>
-</a><text x="253" y="158" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<text x="160" y="145" class="combo tap layer-activator">Conf</text>
+</a><text x="160" y="158" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M1147,160 l106,0" class="combo"/>
-<path d="M1147,160 l26,0" class="combo"/>
-<rect rx="4" ry="4" x="1130" y="143" width="34" height="34" class="combo"/>
+<rect rx="4" ry="4" x="1223" y="143" width="34" height="34" class="combo"/>
 <a href="#Conf">
-<text x="1147" y="160" class="combo tap layer-activator">Conf</text>
-</a><text x="1147" y="173" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<text x="1240" y="160" class="combo tap layer-activator">Conf</text>
+</a><text x="1240" y="173" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g class="combo combopos-2">
 <rect rx="4" ry="4" x="983" y="348" width="34" height="34" class="combo"/>
@@ -1704,20 +1692,16 @@ path.combo {
 <use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
 <g class="combo combopos-0">
-<path d="M253,145 v9 a6.0,6.0 0 0 1 -6.0,6.0 h-100" class="combo"/>
-<path d="M253,145 v-9 a6.0,6.0 0 0 0 -6.0,-6.0 h-20" class="combo"/>
-<rect rx="4" ry="4" x="236" y="128" width="34" height="34" class="combo"/>
+<rect rx="4" ry="4" x="143" y="128" width="34" height="34" class="combo"/>
 <a href="#Conf">
-<text x="253" y="145" class="combo tap layer-activator">Conf</text>
-</a><text x="253" y="158" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<text x="160" y="145" class="combo tap layer-activator">Conf</text>
+</a><text x="160" y="158" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g class="combo combopos-1">
-<path d="M1147,160 l106,0" class="combo"/>
-<path d="M1147,160 l26,0" class="combo"/>
-<rect rx="4" ry="4" x="1130" y="143" width="34" height="34" class="combo"/>
+<rect rx="4" ry="4" x="1223" y="143" width="34" height="34" class="combo"/>
 <a href="#Conf">
-<text x="1147" y="160" class="combo tap layer-activator">Conf</text>
-</a><text x="1147" y="173" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<text x="1240" y="160" class="combo tap layer-activator">Conf</text>
+</a><text x="1240" y="173" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
 <g class="combo combopos-2">
 <rect rx="4" ry="4" x="983" y="348" width="34" height="34" class="combo"/>
