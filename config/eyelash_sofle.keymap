@@ -56,7 +56,7 @@
 
         Nav_combo {
             bindings = <&tog 1>;
-            key-positions = <61 62>;
+            key-positions = <34 35>;
         };
     };
 
