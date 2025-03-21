@@ -26,6 +26,7 @@ Date: Jun 19 2021
 - https://zmk.studio/download
 - https://en.key-test.ru/
 - https://keymap-drawer.streamlit.app/
+- https://pictogrammers.com/library/mdi/x
 
 To draw the keyboard use this command
 ```

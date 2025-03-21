@@ -865,12 +865,6 @@ parse_config:
       hold: zoom
 
   zmk_combos:
-    system_combo1:
-      align: right
-      offset: 0.15
-    system_combo2:
-      align: left
-      offset: 0.15
     combo_to_2:
       align: top
     combo_to_3:
