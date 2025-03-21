@@ -46,7 +46,7 @@
 
         system_combo1 {
             bindings = <&tog 3>;
-            key-positions = <14 15>;
+            key-positions = <14 13>;
         };
 
         system_combo2 {
