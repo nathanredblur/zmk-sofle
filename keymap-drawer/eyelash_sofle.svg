@@ -828,6 +828,24 @@ path.combo {
 <text x="1000" y="205" class="combo tap layer-activator">Nav</text>
 </a><text x="1000" y="218" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
+<g class="combo combopos-3">
+<rect rx="4" ry="4" x="383" y="33" width="34" height="34" class="combo"/>
+<text x="400" y="50" class="combo tap">{</text>
+</g>
+<g class="combo combopos-4">
+<rect rx="4" ry="4" x="903" y="33" width="34" height="34" class="combo"/>
+<text x="920" y="50" class="combo tap">}</text>
+</g>
+<g class="combo combopos-5">
+<rect rx="4" ry="4" x="303" y="28" width="34" height="34" class="combo"/>
+<text x="320" y="45" class="combo tap">[</text>
+<text x="320" y="32" class="combo shifted">{</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="4" ry="4" x="983" y="28" width="34" height="34" class="combo"/>
+<text x="1000" y="45" class="combo tap">]</text>
+<text x="1000" y="32" class="combo shifted">}</text>
+</g>
 </g>
 </g>
 <g transform="translate(0, 475)" class="layer-Nav">
@@ -1116,6 +1134,24 @@ path.combo {
 <a href="#Nav">
 <text x="1000" y="205" class="combo tap layer-activator">Nav</text>
 </a><text x="1000" y="218" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+</g>
+<g class="combo combopos-3">
+<rect rx="4" ry="4" x="383" y="33" width="34" height="34" class="combo"/>
+<text x="400" y="50" class="combo tap">{</text>
+</g>
+<g class="combo combopos-4">
+<rect rx="4" ry="4" x="903" y="33" width="34" height="34" class="combo"/>
+<text x="920" y="50" class="combo tap">}</text>
+</g>
+<g class="combo combopos-5">
+<rect rx="4" ry="4" x="303" y="28" width="34" height="34" class="combo"/>
+<text x="320" y="45" class="combo tap">[</text>
+<text x="320" y="32" class="combo shifted">{</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="4" ry="4" x="983" y="28" width="34" height="34" class="combo"/>
+<text x="1000" y="45" class="combo tap">]</text>
+<text x="1000" y="32" class="combo shifted">}</text>
 </g>
 </g>
 </g>
@@ -1415,6 +1451,24 @@ path.combo {
 <text x="1000" y="205" class="combo tap layer-activator">Nav</text>
 </a><text x="1000" y="218" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
 </g>
+<g class="combo combopos-3">
+<rect rx="4" ry="4" x="383" y="33" width="34" height="34" class="combo"/>
+<text x="400" y="50" class="combo tap">{</text>
+</g>
+<g class="combo combopos-4">
+<rect rx="4" ry="4" x="903" y="33" width="34" height="34" class="combo"/>
+<text x="920" y="50" class="combo tap">}</text>
+</g>
+<g class="combo combopos-5">
+<rect rx="4" ry="4" x="303" y="28" width="34" height="34" class="combo"/>
+<text x="320" y="45" class="combo tap">[</text>
+<text x="320" y="32" class="combo shifted">{</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="4" ry="4" x="983" y="28" width="34" height="34" class="combo"/>
+<text x="1000" y="45" class="combo tap">]</text>
+<text x="1000" y="32" class="combo shifted">}</text>
+</g>
 </g>
 </g>
 <g transform="translate(0, 1424)" class="layer-Conf">
@@ -1708,6 +1762,24 @@ path.combo {
 <a href="#Nav">
 <text x="1000" y="205" class="combo tap layer-activator">Nav</text>
 </a><text x="1000" y="218" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+</g>
+<g class="combo combopos-3">
+<rect rx="4" ry="4" x="383" y="33" width="34" height="34" class="combo"/>
+<text x="400" y="50" class="combo tap">{</text>
+</g>
+<g class="combo combopos-4">
+<rect rx="4" ry="4" x="903" y="33" width="34" height="34" class="combo"/>
+<text x="920" y="50" class="combo tap">}</text>
+</g>
+<g class="combo combopos-5">
+<rect rx="4" ry="4" x="303" y="28" width="34" height="34" class="combo"/>
+<text x="320" y="45" class="combo tap">[</text>
+<text x="320" y="32" class="combo shifted">{</text>
+</g>
+<g class="combo combopos-6">
+<rect rx="4" ry="4" x="983" y="28" width="34" height="34" class="combo"/>
+<text x="1000" y="45" class="combo tap">]</text>
+<text x="1000" y="32" class="combo shifted">}</text>
 </g>
 </g>
 </g>
