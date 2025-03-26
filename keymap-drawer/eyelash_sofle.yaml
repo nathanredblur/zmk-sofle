@@ -261,9 +261,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
-- p: [14, 13]
+- p: [0, 1]
   k: {t: Conf, h: toggle}
-- p: [25, 24]
+- p: [12, 11]
   k: {t: Conf, h: toggle}
 - p: [34, 35]
   k: {t: Nav, h: toggle}
