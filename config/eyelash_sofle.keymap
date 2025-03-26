@@ -46,12 +46,12 @@
 
         system_combo1 {
             bindings = <&tog 3>;
-            key-positions = <14 13>;
+            key-positions = <0 1>;
         };
 
         system_combo2 {
             bindings = <&tog 3>;
-            key-positions = <25 24>;
+            key-positions = <12 11>;
         };
 
         Nav_combo {
