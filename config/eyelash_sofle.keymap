@@ -49,11 +49,6 @@
             key-positions = <0 1>;
         };
 
-        Nav_combo {
-            bindings = <&tog 1>;
-            key-positions = <34 35>;
-        };
-
         left_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <4 5>;
