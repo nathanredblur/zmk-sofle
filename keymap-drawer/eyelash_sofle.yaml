@@ -263,8 +263,6 @@ layers:
 combos:
 - p: [0, 1]
   k: {t: Conf, h: toggle}
-- p: [34, 35]
-  k: {t: Nav, h: toggle}
 - p: [4, 5]
   k: '{'
   l: [Base]
