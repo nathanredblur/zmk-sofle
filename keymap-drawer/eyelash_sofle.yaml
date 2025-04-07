@@ -202,7 +202,7 @@ layers:
   - {t: '$$mdi:bluetooth-connect$$', s: '3'}
   - {t: '$$mdi:bluetooth-connect$$', s: '4'}
   - $$mdi:bluetooth-off$$
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -215,7 +215,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:progress-download$$
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:progress-download$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -225,10 +225,10 @@ layers:
   - $$mdi:led-on$$
   - {t: '$$mdi:palette$$', s: '$$mdi:menu-right$$'}
   - {t: '$$mdi:palette$$', s: '$$mdi:menu-left$$'}
-  - RGB COLOR HSB(274,100,50)
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB HUI
+  - RGB HUD
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -238,12 +238,11 @@ layers:
   - {t: '$$mdi:speedometer$$', s: '$$mdi:fast-forward$$'}
   - $$mdi:brightness-5$$
   - $$mdi:brightness-3$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&soft_off'
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - RGB SAI
+  - RGB SAD
   - '&soft_off'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&soft_off'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -252,9 +251,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
