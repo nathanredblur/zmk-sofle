@@ -142,15 +142,16 @@
             >;
 
             label = "Fn";
+            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         Configurations {
             bindings = <
-&out OUT_TOG     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2                       &bt BT_SEL 3  &bt BT_CLR     &mmv MOVE_UP     &none        &none  &none  &none   &none  &none
-&none            &none            &none            &none                              &none         &bootloader    &mmv MOVE_DOWN   &bootloader  &none  &none  &none   &none  &none
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_COLOR_HSB(274,100,50)  &none         &sys_reset     &mmv MOVE_LEFT   &sys_reset   &none  &none  &none   &none  &none
-&rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none                              &none         &soft_off      &mmv MOVE_RIGHT  &soft_off    &none  &none  &none   &none  &none
-&none            &none            &none            &none                              &trans        &none          &mkp LCLK        &none        &none  &none  &trans  &none
+&out OUT_TOG     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_CLR     &none  &none        &none  &none  &none   &none  &none
+&none            &none            &none            &none            &none            &bootloader    &none  &bootloader  &none  &none  &none   &none  &none
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &sys_reset     &none  &sys_reset   &none  &none  &none   &none  &none
+&rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &soft_off      &none  &soft_off    &none  &none  &none   &none  &none
+&none            &none            &none            &none            &none            &none          &none  &none        &none  &none  &trans  &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
