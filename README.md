@@ -36,7 +36,7 @@ keymap -c ./keymap_drawer.config.yaml draw ./keymap-drawer/eyelash_sofle.yaml -j
 ```
 
 # Resources to practice
-
+- https://docs.splitkb.com/resources
 - https://www.edclub.com/sportal/program-3.game
 - https://www.keybr.com/
 - https://typ.ing/
