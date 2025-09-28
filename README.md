@@ -36,7 +36,7 @@ keymap -c ./keymap_drawer.config.yaml draw ./keymap-drawer/eyelash_sofle.yaml -j
 ```
 
 # Resources to practice
-- https://docs.splitkb.com/resources
+- https://agilefingers.com/es/textos/texto-ejemplo
 - https://www.edclub.com/sportal/program-3.game
 - https://www.keybr.com/
 - https://typ.ing/
@@ -47,6 +47,9 @@ keymap -c ./keymap_drawer.config.yaml draw ./keymap-drawer/eyelash_sofle.yaml -j
 - https://github.com/urob/zmk-config
 - https://github.com/WillJH/ZMKKeyboard
 - https://github.com/minusfive/zmk-config/tree/main
+- https://josefadamcik.github.io/SofleKeyboard/
+- https://github.com/josefadamcik/SofleKeyboard
+- https://docs.splitkb.com/resources
 
 # Tutorials
 
