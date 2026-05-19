@@ -1,29 +1,68 @@
-# Sofle
+# Eyelash Sofle
 
-- [中文](README.md)
-- [English](README_EN.md)
+<img src="keymap-drawer/eyelash_sofle.svg" >
 
-## 更新列表
+# Hardware
+Sofle Split Keyboard Bluetooth Dual Mode Zmk Scheme Custom Rgb Hot Swap With View Directional Rocker Knob Screen Keyboard
+
+Model: nice!nano
+Board-ID: nRF52840-nicenano (v2?)
+SoftDevice: S140 version 6.1.1
+Date: Jun 19 2021
+- where to buy: https://es.aliexpress.com/item/1005007821701661.html
+
+# How to modify a key
+0. Check the tutorial video in this readme
+1. Modify the key in this file `boards/arm/eyelash_sofle/eyelash_sofle.keymap`
+   - Use https://nickcoutsos.github.io/keymap-editor/ and load your config repo 
+2. Create a commit with your changes
+3. Download the compiled files in github actions
+4. Connect your devices by USB and press the reset button twice
+5. Copy the files in the usb folder (left for left, and right for right)
+
+# Tools
+
+- https://nickcoutsos.github.io/keymap-editor/
+- https://zmk.studio/download
+- https://en.key-test.ru/
+- https://keymap-drawer.streamlit.app/
+- https://pictogrammers.com/library/mdi/x
+
+To draw the keyboard use this command
+```
+keymap -c ./keymap_drawer.config.yaml parse -z ./config/eyelash_sofle.keymap > ./keymap-drawer/eyelash_sofle.yaml
+
+keymap -c ./keymap_drawer.config.yaml draw ./keymap-drawer/eyelash_sofle.yaml -j ./config/eyelash_sofle.json > ./keymap-drawer/eyelash_sofle.svg
+```
+
+# Resources to practice
+- https://agilefingers.com/es/textos/texto-ejemplo
+- https://www.edclub.com/sportal/program-3.game
+- https://www.keybr.com/
+- https://typ.ing/
+
+# Inspiration
+
+- https://github.com/mctechnology17/zmk-config
+- https://github.com/urob/zmk-config
+- https://github.com/WillJH/ZMKKeyboard
+- https://github.com/minusfive/zmk-config/tree/main
+- https://josefadamcik.github.io/SofleKeyboard/
+- https://github.com/josefadamcik/SofleKeyboard
+- https://docs.splitkb.com/resources
+
+# Tutorials
+
+- https://www.youtube.com/watch?v=Kx8F4xI5yno
+
+# Update List
 
 - 2024/12/21
-  1. 增加zmk-studio支持（只需要刷新左手即可使用）。
+  1. Added support for zmk-studio (just refresh the left hand to use).
 - 2024/10/24
-  1. 修改供电模式，功耗降低。
-  2. 修正RGB供电自动关闭的功能。
-- 2025/3/30 增加睡眠进入时间1小时  增加防抖时间 优化睡眠后功耗 
-- 2025/8/22
-  1. 更新了soft off。当您同时按下 Q、S 和 Z 键并按住 2 秒钟时，键盘将进入深度睡眠状态，无法通过按键唤醒。携带外出时可以使用此功能。激活方式为按一次复位开关。
-  2. 这个月，我还更新了矮轴版本sofle和corne的外壳。框架和底板加厚了，复位开关的开口也进行了调整，可以轻松按下复位开关。目前，我们仍在构思如何设计带有倾斜支架的外壳。如果您仔细检查过 PCB，您会注意到有用于扩展 IO 的预留接口。不知道有没有人能够使用它们，我会尝试一下！
-  3. 右侧键盘屏幕上的GIF动画被移除，这将显著降低右侧键盘的功耗。
+  1. Modified power supply mode to reduce power consumption.
+  2. Fixed the automatic shut-off feature for RGB power supply.
 
-> 如果您的键盘于2025年8月22之前更新，请更新最新的固件。
->
-
-## 联系我
-
-如需3D打印的模型文件或者键盘有任何异常和故障，请联系380465425@qq.com
-
-## Sofle键位图
-
-![Sofle键位图](keymap-drawer/eyelash_sofle.svg)
-
+> Original Repo https://github.com/a741725193/zmk-sofle
+> 
+---
