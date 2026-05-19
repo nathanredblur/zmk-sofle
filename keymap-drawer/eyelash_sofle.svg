@@ -1,5 +1,8 @@
-<svg width="1320" height="1899" viewBox="0 0 1320 1899" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1320" height="4035" viewBox="0 0 1320 4035" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
+<svg id="mdi:alpha-w-box">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-alpha-w-box" viewBox="0 0 24 24"><path d="M9,17H15A2,2 0 0,0 17,15V7H15V15H13V8H11V15H9V7H7V15A2,2 0 0,0 9,17M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3Z" /></svg>
+</svg>
 <svg id="mdi:apple-keyboard-caps">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-caps" viewBox="0 0 24 24"><path d="M15,14V8H17.17L12,2.83L6.83,8H9V14H15M12,0L22,10H17V16H7V10H2L12,0M7,18H17V24H7V18M15,20H9V22H15V20Z" /></svg>
 </svg>
@@ -48,9 +51,6 @@
 <svg id="mdi:bluetooth-off">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-bluetooth-off" viewBox="0 0 24 24"><path d="M13,5.83L14.88,7.71L13.28,9.31L14.69,10.72L17.71,7.7L12,2H11V7.03L13,9.03M5.41,4L4,5.41L10.59,12L5,17.59L6.41,19L11,14.41V22H12L16.29,17.71L18.59,20L20,18.59M13,18.17V14.41L14.88,16.29" /></svg>
 </svg>
-<svg id="mdi:brightness-3">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-brightness-3" viewBox="0 0 24 24"><path d="M9,2C7.95,2 6.95,2.16 6,2.46C10.06,3.73 13,7.5 13,12C13,16.5 10.06,20.27 6,21.54C6.95,21.84 7.95,22 9,22A10,10 0 0,0 19,12A10,10 0 0,0 9,2Z" /></svg>
-</svg>
 <svg id="mdi:brightness-5">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-brightness-5" viewBox="0 0 24 24"><path d="M12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" /></svg>
 </svg>
@@ -59,6 +59,9 @@
 </svg>
 <svg id="mdi:clipboard-outline">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-clipboard-outline" viewBox="0 0 24 24"><path d="M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M7,7H17V5H19V19H5V5H7V7Z" /></svg>
+</svg>
+<svg id="mdi:cog">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cog" viewBox="0 0 24 24"><path d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" /></svg>
 </svg>
 <svg id="mdi:crop-free">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-crop-free" viewBox="0 0 24 24"><path d="M19,3H15V5H19V9H21V5C21,3.89 20.1,3 19,3M19,19H15V21H19A2,2 0 0,0 21,19V15H19M5,15H3V19A2,2 0 0,0 5,21H9V19H5M3,5V9H5V5H9V3H5A2,2 0 0,0 3,5Z" /></svg>
@@ -72,8 +75,14 @@
 <svg id="mdi:fast-forward">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-fast-forward" viewBox="0 0 24 24"><path d="M13,6V18L21.5,12M4,18L12.5,12L4,6V18Z" /></svg>
 </svg>
+<svg id="mdi:format-color-fill">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-format-color-fill" viewBox="0 0 24 24"><path d="M19,11.5C19,11.5 17,13.67 17,15A2,2 0 0,0 19,17A2,2 0 0,0 21,15C21,13.67 19,11.5 19,11.5M5.21,10L10,5.21L14.79,10M16.56,8.94L7.62,0L6.21,1.41L8.59,3.79L3.44,8.94C2.85,9.5 2.85,10.47 3.44,11.06L8.94,16.56C9.23,16.85 9.62,17 10,17C10.38,17 10.77,16.85 11.06,16.56L16.56,11.06C17.15,10.47 17.15,9.5 16.56,8.94Z" /></svg>
+</svg>
 <svg id="mdi:gesture-tap-hold">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-gesture-tap-hold" viewBox="0 0 24 24"><path d="M10,9A1,1 0 0,1 11,8A1,1 0 0,1 12,9V13.47L13.21,13.6L18.15,15.79C18.68,16.03 19,16.56 19,17.14V21.5C18.97,22.32 18.32,22.97 17.5,23H11C10.62,23 10.26,22.85 10,22.57L5.1,18.37L5.84,17.6C6.03,17.39 6.3,17.28 6.58,17.28H6.8L10,19V9M9,12.44V9A2,2 0 0,1 11,7A2,2 0 0,1 13,9V12.44C14.19,11.75 15,10.47 15,9A4,4 0 0,0 11,5A4,4 0 0,0 7,9C7,10.47 7.81,11.75 9,12.44Z" /></svg>
+</svg>
+<svg id="mdi:invert-colors">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-invert-colors" viewBox="0 0 24 24"><path d="M12,19.58V19.58C10.4,19.58 8.89,18.96 7.76,17.83C6.62,16.69 6,15.19 6,13.58C6,12 6.62,10.47 7.76,9.34L12,5.1M17.66,7.93L12,2.27V2.27L6.34,7.93C3.22,11.05 3.22,16.12 6.34,19.24C7.9,20.8 9.95,21.58 12,21.58C14.05,21.58 16.1,20.8 17.66,19.24C20.78,16.12 20.78,11.05 17.66,7.93Z" /></svg>
 </svg>
 <svg id="mdi:keyboard-esc">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-keyboard-esc" viewBox="0 0 24 24"><path d="M1 7H7V9H3V11H7V13H3V15H7V17H1V7M11 7H15V9H11V11H13C14.11 11 15 11.9 15 13V15C15 16.11 14.11 17 13 17H9V15H13V13H11C9.9 13 9 12.11 9 11V9C9 7.9 9.9 7 11 7M19 7H21C22.11 7 23 7.9 23 9V10H21V9H19V15H21V14H23V15C23 16.11 22.11 17 21 17H19C17.9 17 17 16.11 17 15V9C17 7.9 17.9 7 19 7Z" /></svg>
@@ -132,6 +141,9 @@
 <svg id="mdi:play-pause">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-play-pause" viewBox="0 0 24 24"><path d="M3,5V19L11,12M13,19H16V5H13M18,5V19H21V5" /></svg>
 </svg>
+<svg id="mdi:power-sleep">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-power-sleep" viewBox="0 0 24 24"><path d="M18.73,18C15.4,21.69 9.71,22 6,18.64C2.33,15.31 2.04,9.62 5.37,5.93C6.9,4.25 9,3.2 11.27,3C7.96,6.7 8.27,12.39 12,15.71C13.63,17.19 15.78,18 18,18C18.25,18 18.5,18 18.73,18Z" /></svg>
+</svg>
 <svg id="mdi:progress-download">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-progress-download" viewBox="0 0 24 24"><path d="M13,2.03C17.73,2.5 21.5,6.25 21.95,11C22.5,16.5 18.5,21.38 13,21.93V19.93C16.64,19.5 19.5,16.61 19.96,12.97C20.5,8.58 17.39,4.59 13,4.05V2.05L13,2.03M11,2.06V4.06C9.57,4.26 8.22,4.84 7.1,5.74L5.67,4.26C7.19,3 9.05,2.25 11,2.06M4.26,5.67L5.69,7.1C4.8,8.23 4.24,9.58 4.05,11H2.05C2.25,9.04 3,7.19 4.26,5.67M2.06,13H4.06C4.24,14.42 4.81,15.77 5.69,16.9L4.27,18.33C3.03,16.81 2.26,14.96 2.06,13M7.1,18.37C8.23,19.25 9.58,19.82 11,20V22C9.04,21.79 7.18,21 5.67,19.74L7.1,18.37M12,16.5L7.5,12H11V8H13V12H16.5L12,16.5Z" /></svg>
 </svg>
@@ -146,6 +158,9 @@
 </svg>
 <svg id="mdi:toggle-switch">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-toggle-switch" viewBox="0 0 24 24"><path d="M17,7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7M17,15A3,3 0 0,1 14,12A3,3 0 0,1 17,9A3,3 0 0,1 20,12A3,3 0 0,1 17,15Z" /></svg>
+</svg>
+<svg id="mdi:toggle-switch-variant">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-toggle-switch-variant" viewBox="0 0 24 24"><path d="M18.4 1.6C18 1.2 17.5 1 17 1H7C6.5 1 6 1.2 5.6 1.6C5.2 2 5 2.5 5 3V21C5 21.5 5.2 22 5.6 22.4C6 22.8 6.5 23 7 23H17C17.5 23 18 22.8 18.4 22.4C18.8 22 19 21.5 19 21V3C19 2.5 18.8 2 18.4 1.6M16 7C16 7.6 15.6 8 15 8H9C8.4 8 8 7.6 8 7V5C8 4.4 8.4 4 9 4H15C15.6 4 16 4.4 16 5V7Z" /></svg>
 </svg>
 <svg id="mdi:transfer">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-transfer" viewBox="0 0 24 24"><path d="M8 4A2 2 0 0 0 6 6V10H8V6H16V9H13.5L17 12.5L20.5 9H18V6A2 2 0 0 0 16 4H8M3 12V14H11V12H3M3 15V17H11V15H3M13 15V17H21V15H13M3 18V20H11V18H3M13 18V20H21V18H13Z" /></svg>
@@ -523,10 +538,108 @@ path.combo {
     --color--key--bg: var(--color--material--teal--200);
     --color--key--border: var(--color--material--teal--100);
 }
+
+/* Smooth interactive feel on every key (filter-only, no transform) */
+g.key {
+    transition: filter 0.18s ease-out;
+}
+g.key:hover {
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.28)) brightness(1.04);
+    cursor: pointer;
+}
+
+/* Combos: glow on hover */
+g.combo {
+    transition: filter 0.18s ease-out;
+}
+g.combo:hover {
+    filter: drop-shadow(0 0 6px var(--color--material--blue--400));
+}
+
+/* Subtle pulse on the red Esc/Caps key so users notice the mod-tap */
+@keyframes subtle-pulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.82; }
+}
+g.key.keypos-0 rect.key {
+    animation: subtle-pulse 3.2s ease-in-out infinite;
+}
+
+/* Soft fade-in when the page loads (opacity-only to avoid transform clash) */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+svg > g {
+    animation: fade-in 0.55s ease-out both;
+}
+
+/* Legend (injected by post-processor) */
+.legend-title {
+    font-weight: 800;
+    font-size: 36px;
+    text-anchor: start;
+    fill: var(--color--material--blue-gray--800);
+}
+.legend-section {
+    font-weight: 700;
+    font-size: 20px;
+    text-anchor: start;
+    fill: var(--color--material--blue-gray--700);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+.legend-item, .legend-row, .legend-note {
+    text-anchor: start;
+    font-size: 15px;
+    fill: var(--color--material--blue-gray--800);
+}
+.legend-note {
+    font-size: 13px;
+    fill: var(--color--material--blue-gray--500);
+    font-style: italic;
+}
+.legend-row .label {
+    font-weight: 600;
+    fill: var(--color--material--blue-gray--900);
+}
+.legend-row .desc {
+    fill: var(--color--material--blue-gray--600);
+}
+.legend-divider {
+    stroke: var(--color--material--blue-gray--200);
+    stroke-width: 1.5;
+}
+.legend-card {
+    fill: var(--color--material--blue-gray--50);
+    stroke: var(--color--material--blue-gray--100);
+    stroke-width: 1;
+    rx: 8;
+    ry: 8;
+}
+.legend-icon {
+    color: var(--color--material--blue-gray--800);
+}
+.legend-arrow {
+    stroke: var(--color--material--purple--400);
+    stroke-width: 1.5;
+    fill: none;
+    marker-end: url(#legend-arrowhead);
+}
+.legend-arrow-text {
+    font-size: 13px;
+    fill: var(--color--material--purple--600);
+    text-anchor: start;
+    font-style: italic;
+}
+.legend-chip-tap   { fill: var(--color--material--blue--500); }
+.legend-chip-hold  { fill: var(--color--material--teal--500); }
+.legend-chip-shift { fill: var(--color--material--purple--400); }
+.legend-chip-combo { fill: var(--color--material--yellow--700); }
 </style>
 <g transform="translate(0, 0)" class="layer-Base">
-<text x="0" y="0" class="label" id="Base">Base</text>
-<g transform="translate(0, 0)">
+<text x="0" y="45" class="label" id="Base">Base</text>
+<g transform="translate(0, 178)">
 <g transform="translate(40, 80)" class="key keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:keyboard-esc"/>
@@ -692,14 +805,12 @@ path.combo {
 <g transform="translate(1200, 240)" class="key keypos-37">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <text x="0" y="0" class="key tap">;</text>
-<text x="0" y="34" class="key hold">Alt+N</text>
-<text x="0" y="-34" class="key shifted">:</text>
+<text x="0" y="34" class="key hold">ñ</text>
 </g>
 <g transform="translate(1280, 240)" class="key keypos-38">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <text x="0" y="0" class="key tap">&#x27;</text>
-<text x="0" y="34" class="key hold">´</text>
-<text x="0" y="-34" class="key shifted">&quot;</text>
+<text x="0" y="34" class="key hold">é</text>
 </g>
 <g transform="translate(40, 320)" class="key keypos-39">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
@@ -812,56 +923,75 @@ path.combo {
 <text x="0" y="0" class="key tap">]</text>
 <text x="0" y="-34" class="key shifted">}</text>
 </g>
-<g class="combo combopos-0">
-<rect rx="4" ry="4" x="63" y="63" width="34" height="34" class="combo"/>
-<a href="#Conf">
-<text x="80" y="80" class="combo tap layer-activator">Conf</text>
-</a><text x="80" y="93" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<g class="combo combopos-0" data-keys="0,1">
+<path d="M80,24 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v24" class="combo"/>
+<path d="M80,24 h34 a6.0,6.0 0 0 1 6.0,6.0 v24" class="combo"/>
+<rect rx="4" ry="4" x="63" y="7" width="34" height="34" class="combo"/>
+<use href="#mdi:cog" xlink:href="#mdi:cog" x="67" y="11" height="26" width="26.0" class="combo tap glyph mdi:cog"/>
+<use href="#mdi:toggle-switch-variant" xlink:href="#mdi:toggle-switch-variant" x="72" y="21" height="16" width="16.0" class="combo hold glyph mdi:toggle-switch-variant"/>
 </g>
-<g class="combo combopos-1">
-<rect rx="4" ry="4" x="383" y="33" width="34" height="34" class="combo"/>
-<text x="400" y="50" class="combo tap">{</text>
+<g class="combo combopos-1" data-keys="4,5">
+<path d="M400,-3 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v20" class="combo"/>
+<path d="M400,-3 h34 a6.0,6.0 0 0 1 6.0,6.0 v20" class="combo"/>
+<rect rx="4" ry="4" x="383" y="-20" width="34" height="34" class="combo"/>
+<text x="400" y="-3" class="combo tap">{</text>
 </g>
-<g class="combo combopos-2">
-<rect rx="4" ry="4" x="903" y="33" width="34" height="34" class="combo"/>
-<text x="920" y="50" class="combo tap">}</text>
+<g class="combo combopos-2" data-keys="7,8">
+<path d="M920,-3 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v20" class="combo"/>
+<path d="M920,-3 h34 a6.0,6.0 0 0 1 6.0,6.0 v20" class="combo"/>
+<rect rx="4" ry="4" x="903" y="-20" width="34" height="34" class="combo"/>
+<text x="920" y="-3" class="combo tap">}</text>
 </g>
-<g class="combo combopos-3">
-<rect rx="4" ry="4" x="303" y="28" width="34" height="34" class="combo"/>
-<text x="320" y="45" class="combo tap">[</text>
-<text x="320" y="32" class="combo shifted">{</text>
+<g class="combo combopos-3" data-keys="3,4">
+<path d="M320,-33 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v40" class="combo"/>
+<path d="M320,-33 h34 a6.0,6.0 0 0 1 6.0,6.0 v50" class="combo"/>
+<rect rx="4" ry="4" x="303" y="-50" width="34" height="34" class="combo"/>
+<text x="320" y="-33" class="combo tap">[</text>
+<text x="320" y="-46" class="combo shifted">{</text>
 </g>
-<g class="combo combopos-4">
-<rect rx="4" ry="4" x="983" y="28" width="34" height="34" class="combo"/>
-<text x="1000" y="45" class="combo tap">]</text>
-<text x="1000" y="32" class="combo shifted">}</text>
+<g class="combo combopos-4" data-keys="8,9">
+<path d="M1000,-33 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v50" class="combo"/>
+<path d="M1000,-33 h34 a6.0,6.0 0 0 1 6.0,6.0 v40" class="combo"/>
+<rect rx="4" ry="4" x="983" y="-50" width="34" height="34" class="combo"/>
+<text x="1000" y="-33" class="combo tap">]</text>
+<text x="1000" y="-46" class="combo shifted">}</text>
 </g>
-<g class="combo combopos-5">
-<rect rx="4" ry="4" x="223" y="28" width="34" height="34" class="combo"/>
-<text x="240" y="45" class="combo tap">(</text>
+<g class="combo combopos-5" data-keys="3,2">
+<path d="M240,-53 h34 a6.0,6.0 0 0 1 6.0,6.0 v60" class="combo"/>
+<path d="M240,-53 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v70" class="combo"/>
+<rect rx="4" ry="4" x="223" y="-70" width="34" height="34" class="combo"/>
+<text x="240" y="-53" class="combo tap">(</text>
 </g>
-<g class="combo combopos-6">
-<rect rx="4" ry="4" x="1063" y="28" width="34" height="34" class="combo"/>
-<text x="1080" y="45" class="combo tap">)</text>
+<g class="combo combopos-6" data-keys="9,10">
+<path d="M1080,-53 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v60" class="combo"/>
+<path d="M1080,-53 h34 a6.0,6.0 0 0 1 6.0,6.0 v70" class="combo"/>
+<rect rx="4" ry="4" x="1063" y="-70" width="34" height="34" class="combo"/>
+<text x="1080" y="-53" class="combo tap">)</text>
 </g>
-<g class="combo combopos-7">
-<path d="M660,130 l-193,0" class="combo"/>
-<path d="M660,130 l193,0" class="combo"/>
-<rect rx="4" ry="4" x="643" y="113" width="34" height="34" class="combo"/>
-<text x="660" y="130" class="combo tap">\</text>
-<text x="660" y="117" class="combo shifted">|</text>
+<g class="combo combopos-7" data-keys="18,20" transform="translate(-16, 0)">
+<path d="M660,-71 h-214 a6.0,6.0 0 0 0 -6.0,6.0 v168" class="combo"/>
+<path d="M660,-71 h214 a6.0,6.0 0 0 1 6.0,6.0 v168" class="combo"/>
+<rect rx="4" ry="4" x="643" y="-88" width="34" height="34" class="combo"/>
+<text x="660" y="-71" class="combo tap">\</text>
+<text x="660" y="-84" class="combo shifted">|</text>
 </g>
-<g class="combo combopos-8">
-<path d="M660,210 l-193,0" class="combo"/>
-<path d="M660,210 l193,0" class="combo"/>
-<rect rx="4" ry="4" x="643" y="193" width="34" height="34" class="combo"/>
-<text x="660" y="210" class="combo tap">|</text>
+<g class="combo combopos-8" data-keys="31,33">
+<path d="M660,-15 h-214 a6.0,6.0 0 0 0 -6.0,6.0 v192" class="combo"/>
+<path d="M660,-15 h214 a6.0,6.0 0 0 1 6.0,6.0 v192" class="combo"/>
+<rect rx="4" ry="4" x="643" y="-32" width="34" height="34" class="combo"/>
+<text x="660" y="-15" class="combo tap">|</text>
+</g>
+<g class="combo combopos-9" data-keys="26,51">
+<path d="M660,385 h-614 a6.0,6.0 0 0 1 -6.0,-6.0 v-112" class="combo"/>
+<path d="M660,385 h614 a6.0,6.0 0 0 0 6.0,-6.0 v-32" class="combo"/>
+<rect rx="4" ry="4" x="643" y="368" width="34" height="34" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="647" y="372" height="26" width="26.0" class="combo tap glyph mdi:alpha-w-box"/>
 </g>
 </g>
 </g>
-<g transform="translate(0, 475)" class="layer-Nav">
-<text x="0" y="0" class="label" id="Nav">Nav</text>
-<g transform="translate(0, 0)">
+<g transform="translate(0, 652)" class="layer-Nav">
+<text x="0" y="45" class="label" id="Nav">Nav</text>
+<g transform="translate(0, 178)">
 <g transform="translate(40, 80)" class="key trans keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
@@ -1130,30 +1260,37 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g class="combo combopos-0">
-<rect rx="4" ry="4" x="63" y="63" width="34" height="34" class="combo"/>
-<a href="#Conf">
-<text x="80" y="80" class="combo tap layer-activator">Conf</text>
-</a><text x="80" y="93" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<g class="combo combopos-0" data-keys="0,1">
+<path d="M80,24 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v24" class="combo"/>
+<path d="M80,24 h34 a6.0,6.0 0 0 1 6.0,6.0 v24" class="combo"/>
+<rect rx="4" ry="4" x="63" y="7" width="34" height="34" class="combo"/>
+<use href="#mdi:cog" xlink:href="#mdi:cog" x="67" y="11" height="26" width="26.0" class="combo tap glyph mdi:cog"/>
+<use href="#mdi:toggle-switch-variant" xlink:href="#mdi:toggle-switch-variant" x="72" y="21" height="16" width="16.0" class="combo hold glyph mdi:toggle-switch-variant"/>
 </g>
-<g class="combo combopos-1">
-<path d="M660,130 l-193,0" class="combo"/>
-<path d="M660,130 l193,0" class="combo"/>
-<rect rx="4" ry="4" x="643" y="113" width="34" height="34" class="combo"/>
-<text x="660" y="130" class="combo tap">\</text>
-<text x="660" y="117" class="combo shifted">|</text>
+<g class="combo combopos-1" data-keys="4,5">
+<path d="M660,-71 h-214 a6.0,6.0 0 0 0 -6.0,6.0 v168" class="combo"/>
+<path d="M660,-71 h214 a6.0,6.0 0 0 1 6.0,6.0 v168" class="combo"/>
+<rect rx="4" ry="4" x="643" y="-88" width="34" height="34" class="combo"/>
+<text x="660" y="-71" class="combo tap">\</text>
+<text x="660" y="-84" class="combo shifted">|</text>
 </g>
-<g class="combo combopos-2">
-<path d="M660,210 l-193,0" class="combo"/>
-<path d="M660,210 l193,0" class="combo"/>
-<rect rx="4" ry="4" x="643" y="193" width="34" height="34" class="combo"/>
-<text x="660" y="210" class="combo tap">|</text>
+<g class="combo combopos-2" data-keys="7,8">
+<path d="M660,-15 h-214 a6.0,6.0 0 0 0 -6.0,6.0 v192" class="combo"/>
+<path d="M660,-15 h214 a6.0,6.0 0 0 1 6.0,6.0 v192" class="combo"/>
+<rect rx="4" ry="4" x="643" y="-32" width="34" height="34" class="combo"/>
+<text x="660" y="-15" class="combo tap">|</text>
+</g>
+<g class="combo combopos-3" data-keys="3,4">
+<path d="M660,385 h-614 a6.0,6.0 0 0 1 -6.0,-6.0 v-112" class="combo"/>
+<path d="M660,385 h614 a6.0,6.0 0 0 0 6.0,-6.0 v-32" class="combo"/>
+<rect rx="4" ry="4" x="643" y="368" width="34" height="34" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="647" y="372" height="26" width="26.0" class="combo tap glyph mdi:alpha-w-box"/>
 </g>
 </g>
 </g>
-<g transform="translate(0, 949)" class="layer-Fn">
-<text x="0" y="0" class="label" id="Fn">Fn</text>
-<g transform="translate(0, 0)">
+<g transform="translate(0, 1305)" class="layer-Fn">
+<text x="0" y="45" class="label" id="Fn">Fn</text>
+<g transform="translate(0, 178)">
 <g transform="translate(40, 80)" class="key keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <text x="0" y="0" class="key tap">F23</text>
@@ -1431,30 +1568,37 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <use href="#mdi:transfer" xlink:href="#mdi:transfer" x="-13" y="-13" height="26" width="26.0" class="key trans tap glyph mdi:transfer"/>
 </g>
-<g class="combo combopos-0">
-<rect rx="4" ry="4" x="63" y="63" width="34" height="34" class="combo"/>
-<a href="#Conf">
-<text x="80" y="80" class="combo tap layer-activator">Conf</text>
-</a><text x="80" y="93" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<g class="combo combopos-0" data-keys="0,1">
+<path d="M80,24 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v24" class="combo"/>
+<path d="M80,24 h34 a6.0,6.0 0 0 1 6.0,6.0 v24" class="combo"/>
+<rect rx="4" ry="4" x="63" y="7" width="34" height="34" class="combo"/>
+<use href="#mdi:cog" xlink:href="#mdi:cog" x="67" y="11" height="26" width="26.0" class="combo tap glyph mdi:cog"/>
+<use href="#mdi:toggle-switch-variant" xlink:href="#mdi:toggle-switch-variant" x="72" y="21" height="16" width="16.0" class="combo hold glyph mdi:toggle-switch-variant"/>
 </g>
-<g class="combo combopos-1">
-<path d="M660,130 l-193,0" class="combo"/>
-<path d="M660,130 l193,0" class="combo"/>
-<rect rx="4" ry="4" x="643" y="113" width="34" height="34" class="combo"/>
-<text x="660" y="130" class="combo tap">\</text>
-<text x="660" y="117" class="combo shifted">|</text>
+<g class="combo combopos-1" data-keys="4,5">
+<path d="M660,-71 h-214 a6.0,6.0 0 0 0 -6.0,6.0 v168" class="combo"/>
+<path d="M660,-71 h214 a6.0,6.0 0 0 1 6.0,6.0 v168" class="combo"/>
+<rect rx="4" ry="4" x="643" y="-88" width="34" height="34" class="combo"/>
+<text x="660" y="-71" class="combo tap">\</text>
+<text x="660" y="-84" class="combo shifted">|</text>
 </g>
-<g class="combo combopos-2">
-<path d="M660,210 l-193,0" class="combo"/>
-<path d="M660,210 l193,0" class="combo"/>
-<rect rx="4" ry="4" x="643" y="193" width="34" height="34" class="combo"/>
-<text x="660" y="210" class="combo tap">|</text>
+<g class="combo combopos-2" data-keys="7,8">
+<path d="M660,-15 h-214 a6.0,6.0 0 0 0 -6.0,6.0 v192" class="combo"/>
+<path d="M660,-15 h214 a6.0,6.0 0 0 1 6.0,6.0 v192" class="combo"/>
+<rect rx="4" ry="4" x="643" y="-32" width="34" height="34" class="combo"/>
+<text x="660" y="-15" class="combo tap">|</text>
+</g>
+<g class="combo combopos-3" data-keys="3,4">
+<path d="M660,385 h-614 a6.0,6.0 0 0 1 -6.0,-6.0 v-112" class="combo"/>
+<path d="M660,385 h614 a6.0,6.0 0 0 0 6.0,-6.0 v-32" class="combo"/>
+<rect rx="4" ry="4" x="643" y="368" width="34" height="34" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="647" y="372" height="26" width="26.0" class="combo tap glyph mdi:alpha-w-box"/>
 </g>
 </g>
 </g>
-<g transform="translate(0, 1424)" class="layer-Conf">
-<text x="0" y="0" class="label" id="Conf">Conf</text>
-<g transform="translate(0, 0)">
+<g transform="translate(0, 1957)" class="layer-Conf">
+<text x="0" y="45" class="label" id="Conf">Conf</text>
+<g transform="translate(0, 178)">
 <g transform="translate(40, 80)" class="key keypos-0">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:toggle-switch"/>
@@ -1581,15 +1725,13 @@ path.combo {
 </g>
 <g transform="translate(280, 200)" class="key keypos-29">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.5em">RGB</tspan><tspan x="0" dy="1.0em">HUI</tspan>
-</text>
+<use href="#mdi:format-color-fill" xlink:href="#mdi:format-color-fill" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:format-color-fill"/>
+<text x="0" y="34" class="key hold">H+</text>
 </g>
 <g transform="translate(360, 210)" class="key keypos-30">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.5em">RGB</tspan><tspan x="0" dy="1.0em">HUD</tspan>
-</text>
+<use href="#mdi:format-color-fill" xlink:href="#mdi:format-color-fill" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:format-color-fill"/>
+<text x="0" y="34" class="key hold">H-</text>
 </g>
 <g transform="translate(440, 210)" class="key bootloader keypos-31">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key bootloader"/>
@@ -1631,26 +1773,26 @@ path.combo {
 <g transform="translate(120, 320)" class="key keypos-40">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:brightness-5" xlink:href="#mdi:brightness-5" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:brightness-5"/>
+<text x="0" y="34" class="key hold">B+</text>
 </g>
 <g transform="translate(200, 290)" class="key keypos-41">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:brightness-3" xlink:href="#mdi:brightness-3" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:brightness-3"/>
+<use href="#mdi:brightness-5" xlink:href="#mdi:brightness-5" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:brightness-5"/>
+<text x="0" y="34" class="key hold">B-</text>
 </g>
 <g transform="translate(280, 280)" class="key keypos-42">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.5em">RGB</tspan><tspan x="0" dy="1.0em">SAI</tspan>
-</text>
+<use href="#mdi:invert-colors" xlink:href="#mdi:invert-colors" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:invert-colors"/>
+<text x="0" y="34" class="key hold">S+</text>
 </g>
 <g transform="translate(360, 290)" class="key keypos-43">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">
-<tspan x="0" dy="-0.5em">RGB</tspan><tspan x="0" dy="1.0em">SAD</tspan>
-</text>
+<use href="#mdi:invert-colors" xlink:href="#mdi:invert-colors" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:invert-colors"/>
+<text x="0" y="34" class="key hold">S-</text>
 </g>
 <g transform="translate(440, 290)" class="key keypos-44">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 62%">&amp;soft_o…</tspan></text>
+<use href="#mdi:power-sleep" xlink:href="#mdi:power-sleep" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:power-sleep"/>
 </g>
 <g transform="translate(740, 130)" class="key none keypos-45">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
@@ -1658,7 +1800,7 @@ path.combo {
 </g>
 <g transform="translate(880, 290)" class="key keypos-46">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap"><tspan style="font-size: 62%">&amp;soft_o…</tspan></text>
+<use href="#mdi:power-sleep" xlink:href="#mdi:power-sleep" x="-13" y="-13" height="26" width="26.0" class="key tap glyph mdi:power-sleep"/>
 </g>
 <g transform="translate(960, 290)" class="key none keypos-47">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
@@ -1728,25 +1870,128 @@ path.combo {
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
 <use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-13" y="-13" height="26" width="26.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g class="combo combopos-0">
-<rect rx="4" ry="4" x="63" y="63" width="34" height="34" class="combo"/>
-<a href="#Conf">
-<text x="80" y="80" class="combo tap layer-activator">Conf</text>
-</a><text x="80" y="93" class="combo hold"><tspan style="font-size: 83%">toggle</tspan></text>
+<g class="combo combopos-0" data-keys="0,1">
+<path d="M80,24 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v24" class="combo"/>
+<path d="M80,24 h34 a6.0,6.0 0 0 1 6.0,6.0 v24" class="combo"/>
+<rect rx="4" ry="4" x="63" y="7" width="34" height="34" class="combo"/>
+<use href="#mdi:cog" xlink:href="#mdi:cog" x="67" y="11" height="26" width="26.0" class="combo tap glyph mdi:cog"/>
+<use href="#mdi:toggle-switch-variant" xlink:href="#mdi:toggle-switch-variant" x="72" y="21" height="16" width="16.0" class="combo hold glyph mdi:toggle-switch-variant"/>
 </g>
-<g class="combo combopos-1">
-<path d="M660,130 l-193,0" class="combo"/>
-<path d="M660,130 l193,0" class="combo"/>
-<rect rx="4" ry="4" x="643" y="113" width="34" height="34" class="combo"/>
-<text x="660" y="130" class="combo tap">\</text>
-<text x="660" y="117" class="combo shifted">|</text>
+<g class="combo combopos-1" data-keys="4,5">
+<path d="M660,-71 h-214 a6.0,6.0 0 0 0 -6.0,6.0 v168" class="combo"/>
+<path d="M660,-71 h214 a6.0,6.0 0 0 1 6.0,6.0 v168" class="combo"/>
+<rect rx="4" ry="4" x="643" y="-88" width="34" height="34" class="combo"/>
+<text x="660" y="-71" class="combo tap">\</text>
+<text x="660" y="-84" class="combo shifted">|</text>
 </g>
-<g class="combo combopos-2">
-<path d="M660,210 l-193,0" class="combo"/>
-<path d="M660,210 l193,0" class="combo"/>
-<rect rx="4" ry="4" x="643" y="193" width="34" height="34" class="combo"/>
-<text x="660" y="210" class="combo tap">|</text>
+<g class="combo combopos-2" data-keys="7,8">
+<path d="M660,-15 h-214 a6.0,6.0 0 0 0 -6.0,6.0 v192" class="combo"/>
+<path d="M660,-15 h214 a6.0,6.0 0 0 1 6.0,6.0 v192" class="combo"/>
+<rect rx="4" ry="4" x="643" y="-32" width="34" height="34" class="combo"/>
+<text x="660" y="-15" class="combo tap">|</text>
+</g>
+<g class="combo combopos-3" data-keys="3,4">
+<path d="M660,385 h-614 a6.0,6.0 0 0 1 -6.0,-6.0 v-112" class="combo"/>
+<path d="M660,385 h614 a6.0,6.0 0 0 0 6.0,-6.0 v-32" class="combo"/>
+<rect rx="4" ry="4" x="643" y="368" width="34" height="34" class="combo"/>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="647" y="372" height="26" width="26.0" class="combo tap glyph mdi:alpha-w-box"/>
 </g>
 </g>
+</g>
+<g transform="translate(0, 2557)" class="legend">
+<defs><marker id="legend-arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#ab47bc"/></marker></defs>
+<text x="40" y="42" class="legend-title">Legend</text>
+<line x1="40.0" y1="86.0" x2="1280.0" y2="86.0" class="legend-divider"/>
+<text x="40.0" y="104.0" class="legend-section">Key anatomy</text>
+<g class="key keypos-anatomy-sample"><rect x="260" y="154" rx="6" ry="6" width="110" height="110" fill="#e57373" stroke="#ef9a9a" stroke-width="2"/><text x="274" y="176" font-size="12" fill="#37474f">!</text><text x="315.0" y="215.0" font-size="22" font-weight="700" fill="#263238" text-anchor="middle">1</text><text x="274" y="254" font-size="12" fill="#37474f">Esc</text></g>
+<path d="M282,172 L420,166" class="legend-arrow"/><text x="430" y="170" class="legend-arrow-text">shifted action  — sent when you also hold Shift</text>
+<path d="M315.0,209.0 L420,207.0" class="legend-arrow"/><text x="430" y="213.0" class="legend-arrow-text">tap action  — what you get with a quick press</text>
+<path d="M288,250 L420,250" class="legend-arrow"/><text x="430" y="254" class="legend-arrow-text">hold action  — sent when you hold the key (mod-tap)</text>
+<rect x="220" y="324" rx="5" ry="5" width="64" height="64" fill="#eceff1" stroke="#cfd8dc"/><rect x="370" y="324" rx="5" ry="5" width="64" height="64" fill="#eceff1" stroke="#cfd8dc"/><text x="252.0" y="364.0" font-size="22" font-weight="700" fill="#263238" text-anchor="middle">L</text><text x="402.0" y="364.0" font-size="22" font-weight="700" fill="#263238" text-anchor="middle">;</text><path d="M284,356.0 L370,356.0" stroke="#cfd8dc" stroke-width="2" fill="none"/><rect x="309.0" y="340.0" rx="4" ry="4" width="36" height="32" fill="#fff59d" stroke="#f9a825"/><text x="327.0" y="360.0" font-size="16" font-weight="700" fill="#5d4037" text-anchor="middle">é</text>
+<path d="M355.0,356.0 L420,356.0" class="legend-arrow"/><text x="430" y="361.0" class="legend-arrow-text">combo  — press both keys at once to produce the small yellow box's value</text>
+<line x1="40.0" y1="438.0" x2="1280.0" y2="438.0" class="legend-divider"/>
+<text x="40.0" y="456.0" class="legend-section">Layer navigation</text>
+<text x="40.0" y="486.0" class="legend-row"><tspan class="label">Base → Nav</tspan><tspan class="desc" dx="14">Hold the LEFT thumb cluster key (mo 1).</tspan></text>
+<text x="40.0" y="510.0" class="legend-row"><tspan class="label">Base → Fn</tspan><tspan class="desc" dx="14">Hold the RIGHT thumb cluster key (mo 2).</tspan></text>
+<text x="40.0" y="534.0" class="legend-row"><tspan class="label">Base → Conf</tspan><tspan class="desc" dx="14">Combo Esc + 1 (top-left). Look for the gear icon.</tspan></text>
+<text x="40.0" y="558.0" class="legend-row"><tspan class="label">Any  → caps-word</tspan><tspan class="desc" dx="14">Press both Shifts together (outer pinky on each side).</tspan></text>
+<text x="40.0" y="582.0" class="legend-row"><tspan class="label">Type ñ</tspan><tspan class="desc" dx="14">Hold the SEMI (;) key (right pinky home, hold action).</tspan></text>
+<text x="40.0" y="606.0" class="legend-row"><tspan class="label">Type é</tspan><tspan class="desc" dx="14">Hold the APOS (&#x27;) key (right pinky outer, hold action).</tspan></text>
+<text x="680.0" y="456.0" class="legend-section">Key colors</text>
+<rect x="680.0" y="468.0" width="22" height="22" rx="4" ry="4" fill="#e57373" stroke="#b0bec5"/><text x="716.0" y="486.0" class="legend-row"><tspan class="label">Red — Esc/Caps</tspan><tspan class="desc" dx="10">Tap = Esc, Hold = Caps Lock. Always visible, pulses subtly.</tspan></text>
+<rect x="680.0" y="498.0" width="22" height="22" rx="4" ry="4" fill="#80cbc4" stroke="#b0bec5"/><text x="716.0" y="516.0" class="legend-row"><tspan class="label">Teal — Thumb cluster</tspan><tspan class="desc" dx="10">Layer activators (mo 1 = Nav, mo 2 = Fn).</tspan></text>
+<rect x="680.0" y="528.0" width="22" height="22" rx="4" ry="4" fill="#cfd8dc" stroke="#b0bec5"/><text x="716.0" y="546.0" class="legend-row"><tspan class="label">Gray — Edges</tspan><tspan class="desc" dx="10">Outer columns, pinkies, rotary encoders, rocker.</tspan></text>
+<line x1="40.0" y1="662.0" x2="1280.0" y2="662.0" class="legend-divider"/>
+<text x="40.0" y="680.0" class="legend-section">Icon glossary</text>
+<use href="#mdi:power-sleep" xlink:href="#mdi:power-sleep" x="40.0" y="696.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="716.0" class="legend-row"><tspan class="label">soft-off</tspan><tspan class="desc" dx="10">Turn the keyboard off (deep sleep). Lives in the Conf layer.</tspan></text>
+<use href="#mdi:cog" xlink:href="#mdi:cog" x="40.0" y="726.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="746.0" class="legend-row"><tspan class="label">Conf</tspan><tspan class="desc" dx="10">Toggle the Configurations layer (BT, RGB, reset, etc.).</tspan></text>
+<use href="#mdi:backup-restore" xlink:href="#mdi:backup-restore" x="40.0" y="756.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="776.0" class="legend-row"><tspan class="label">sys-reset</tspan><tspan class="desc" dx="10">Reboot the ZMK firmware (soft reset).</tspan></text>
+<use href="#mdi:progress-download" xlink:href="#mdi:progress-download" x="40.0" y="786.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="806.0" class="legend-row"><tspan class="label">bootloader</tspan><tspan class="desc" dx="10">Enter bootloader mode to flash new firmware.</tspan></text>
+<use href="#mdi:alpha-w-box" xlink:href="#mdi:alpha-w-box" x="40.0" y="816.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="836.0" class="legend-row"><tspan class="label">caps-word</tspan><tspan class="desc" dx="10">One-shot CAPS: types in uppercase until you press space.</tspan></text>
+<use href="#mdi:gesture-tap-hold" xlink:href="#mdi:gesture-tap-hold" x="40.0" y="846.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="866.0" class="legend-row"><tspan class="label">sticky</tspan><tspan class="desc" dx="10">Sticky modifier: tap once, it applies to the next keypress.</tspan></text>
+<use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="40.0" y="876.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="896.0" class="legend-row"><tspan class="label">BT select</tspan><tspan class="desc" dx="10">Choose a Bluetooth profile slot. Shift shows the slot number.</tspan></text>
+<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="40.0" y="906.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="926.0" class="legend-row"><tspan class="label">BT clear</tspan><tspan class="desc" dx="10">Forget the current Bluetooth pairing.</tspan></text>
+<use href="#mdi:usb" xlink:href="#mdi:usb" x="40.0" y="936.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="956.0" class="legend-row"><tspan class="label">USB out</tspan><tspan class="desc" dx="10">Force keyboard output through the USB cable instead of BT.</tspan></text>
+<use href="#mdi:toggle-switch" xlink:href="#mdi:toggle-switch" x="40.0" y="966.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="986.0" class="legend-row"><tspan class="label">OUT_TOG</tspan><tspan class="desc" dx="10">Toggle the active output between USB and Bluetooth.</tspan></text>
+<use href="#mdi:led-on" xlink:href="#mdi:led-on" x="40.0" y="996.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="1016.0" class="legend-row"><tspan class="label">RGB on</tspan><tspan class="desc" dx="10">Toggle the RGB underglow on / off.</tspan></text>
+<use href="#mdi:palette" xlink:href="#mdi:palette" x="40.0" y="1026.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="1046.0" class="legend-row"><tspan class="label">RGB effect</tspan><tspan class="desc" dx="10">Cycle to the next animation effect (Shift = previous).</tspan></text>
+<use href="#mdi:format-color-fill" xlink:href="#mdi:format-color-fill" x="40.0" y="1056.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="1076.0" class="legend-row"><tspan class="label">RGB hue</tspan><tspan class="desc" dx="10">Move the color wheel position. H+ forward, H- backward.</tspan></text>
+<use href="#mdi:invert-colors" xlink:href="#mdi:invert-colors" x="40.0" y="1086.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="76.0" y="1106.0" class="legend-row"><tspan class="label">RGB sat.</tspan><tspan class="desc" dx="10">Saturation. S+ deeper color, S- towards white.</tspan></text>
+<use href="#mdi:speedometer" xlink:href="#mdi:speedometer" x="660.0" y="696.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="716.0" class="legend-row"><tspan class="label">RGB speed</tspan><tspan class="desc" dx="10">Animation speed (Shift = slow it down).</tspan></text>
+<use href="#mdi:brightness-5" xlink:href="#mdi:brightness-5" x="660.0" y="726.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="746.0" class="legend-row"><tspan class="label">RGB bright</tspan><tspan class="desc" dx="10">Underglow brightness. Hold label shows B+ or B-.</tspan></text>
+<use href="#mdi:mouse-left-click-outline" xlink:href="#mdi:mouse-left-click-outline" x="660.0" y="756.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="776.0" class="legend-row"><tspan class="label">LCLK</tspan><tspan class="desc" dx="10">Left mouse click.</tspan></text>
+<use href="#mdi:mouse-right-click-outline" xlink:href="#mdi:mouse-right-click-outline" x="660.0" y="786.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="806.0" class="legend-row"><tspan class="label">RCLK</tspan><tspan class="desc" dx="10">Right mouse click.</tspan></text>
+<use href="#mdi:mouse-scroll-wheel" xlink:href="#mdi:mouse-scroll-wheel" x="660.0" y="816.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="836.0" class="legend-row"><tspan class="label">MCLK</tspan><tspan class="desc" dx="10">Middle mouse click (scroll-wheel press).</tspan></text>
+<use href="#mdi:mouse-move-up" xlink:href="#mdi:mouse-move-up" x="660.0" y="846.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="866.0" class="legend-row"><tspan class="label">MB4</tspan><tspan class="desc" dx="10">Mouse back button (browser history back).</tspan></text>
+<use href="#mdi:mouse-move-down" xlink:href="#mdi:mouse-move-down" x="660.0" y="876.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="896.0" class="legend-row"><tspan class="label">MB5</tspan><tspan class="desc" dx="10">Mouse forward button (browser history forward).</tspan></text>
+<use href="#mdi:mouse" xlink:href="#mdi:mouse" x="660.0" y="906.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="926.0" class="legend-row"><tspan class="label">mmv</tspan><tspan class="desc" dx="10">Pointer movement (arrows on the joystick keys in Nav).</tspan></text>
+<use href="#mdi:camera" xlink:href="#mdi:camera" x="660.0" y="936.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="956.0" class="legend-row"><tspan class="label">Screenshot</tspan><tspan class="desc" dx="10">macOS screenshot tool (Cmd+Shift+5): record, markup, etc.</tspan></text>
+<use href="#mdi:crop-free" xlink:href="#mdi:crop-free" x="660.0" y="966.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="986.0" class="legend-row"><tspan class="label">Region</tspan><tspan class="desc" dx="10">macOS region capture (Cmd+Shift+4). Hold → to clipboard.</tspan></text>
+<use href="#mdi:ocr" xlink:href="#mdi:ocr" x="660.0" y="996.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="1016.0" class="legend-row"><tspan class="label">Full shot</tspan><tspan class="desc" dx="10">macOS full-screen capture (Cmd+Shift+3).</tspan></text>
+<use href="#mdi:transfer" xlink:href="#mdi:transfer" x="660.0" y="1026.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="1046.0" class="legend-row"><tspan class="label">trans</tspan><tspan class="desc" dx="10">Transparent key: falls through to the Base layer&#x27;s binding.</tspan></text>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="660.0" y="1056.0" width="24" height="24" class="legend-icon glyph"/>
+<text x="696.0" y="1076.0" class="legend-row"><tspan class="label">none</tspan><tspan class="desc" dx="10">No binding on this key for this layer.</tspan></text>
+<line x1="40.0" y1="1170.0" x2="1280.0" y2="1170.0" class="legend-divider"/>
+<text x="40.0" y="1188.0" class="legend-section">RGB controls</text>
+<text x="40.0" y="1218.0" class="legend-row"><tspan class="label">TOG / ON / OFF</tspan><tspan class="desc" dx="14">Turn the RGB underglow on, off, or toggle.</tspan></text>
+<text x="40.0" y="1242.0" class="legend-row"><tspan class="label">EFF / EFR</tspan><tspan class="desc" dx="14">Next / previous animation effect (rainbow, breathe, etc.).</tspan></text>
+<text x="40.0" y="1266.0" class="legend-row"><tspan class="label">SPI</tspan><tspan class="desc" dx="14">Animation speed up. Shift = slow it down.</tspan></text>
+<text x="40.0" y="1290.0" class="legend-row"><tspan class="label">BRI / BRD</tspan><tspan class="desc" dx="14">Brightness up / down.</tspan></text>
+<text x="40.0" y="1314.0" class="legend-row"><tspan class="label">HUI / HUD</tspan><tspan class="desc" dx="14">HUE up / down — rotate the color wheel position.</tspan></text>
+<text x="40.0" y="1338.0" class="legend-row"><tspan class="label">SAI / SAD</tspan><tspan class="desc" dx="14">SATURATION up / down — SAD = white-ish, SAI = vivid color.</tspan></text>
+<text x="680.0" y="1188.0" class="legend-section">macOS modifiers</text>
+<text x="680.0" y="1220.0" class="legend-row">⌘ Cmd   ⌥ Option   ⌃ Control   ⇧ Shift   ⇪ Caps Lock   ⎋ Escape</text>
+<text x="680.0" y="1258.0" class="legend-section">Spanish accents (macOS)</text>
+<text x="680.0" y="1290.0" class="legend-row"><tspan class="label">ñ</tspan><tspan class="desc" dx="12">HOLD the SEMI (;) key  — right pinky home</tspan></text>
+<text x="680.0" y="1314.0" class="legend-row"><tspan class="label">é</tspan><tspan class="desc" dx="12">HOLD the APOS (’) key  — right pinky outer</tspan></text>
+<text x="680.0" y="1342.0" class="legend-note">Holding the SEMI / APOS keys fires a macro that sends Option+N (or</text>
+<text x="680.0" y="1360.0" class="legend-note">Option+E) — the macOS tilde / acute dead key — and then the vowel.</text>
+<text x="680.0" y="1378.0" class="legend-note">Result: one hold → one accented vowel, no extra keypress needed.</text>
 </g>
 </svg>

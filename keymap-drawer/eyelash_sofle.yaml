@@ -38,8 +38,8 @@ layers:
   - J
   - K
   - L
-  - {t: ;, h: Alt+N, s: ':'}
-  - {t: '''', h: ´, s: '"'}
+  - {t: ;, h: ñ}
+  - {t: '''', h: é}
   - {t: '`', h: '$$mdi:apple-keyboard-shift$$', s: '~'}
   - Z
   - X
@@ -225,8 +225,8 @@ layers:
   - $$mdi:led-on$$
   - {t: '$$mdi:palette$$', s: '$$mdi:menu-right$$'}
   - {t: '$$mdi:palette$$', s: '$$mdi:menu-left$$'}
-  - RGB HUI
-  - RGB HUD
+  - {t: '$$mdi:format-color-fill$$', h: H+}
+  - {t: '$$mdi:format-color-fill$$', h: H-}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
@@ -236,13 +236,13 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:speedometer$$', s: '$$mdi:fast-forward$$'}
-  - $$mdi:brightness-5$$
-  - $$mdi:brightness-3$$
-  - RGB SAI
-  - RGB SAD
-  - '&soft_off'
+  - {t: '$$mdi:brightness-5$$', h: B+}
+  - {t: '$$mdi:brightness-5$$', h: B-}
+  - {t: '$$mdi:invert-colors$$', h: S+}
+  - {t: '$$mdi:invert-colors$$', h: S-}
+  - $$mdi:power-sleep$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&soft_off'
+  - $$mdi:power-sleep$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -262,26 +262,48 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
 - p: [0, 1]
-  k: {t: Conf, h: toggle}
+  k: {t: '$$mdi:cog$$', h: '$$mdi:toggle-switch-variant$$'}
+  a: top
+  o: 0.2
 - p: [4, 5]
   k: '{'
   l: [Base]
+  a: top
+  o: 0.15
 - p: [7, 8]
   k: '}'
   l: [Base]
+  a: top
+  o: 0.15
 - p: [3, 4]
   k: {t: '[', s: '{'}
   l: [Base]
+  a: top
+  o: 0.4
 - p: [8, 9]
   k: {t: ']', s: '}'}
   l: [Base]
+  a: top
+  o: 0.4
 - p: [3, 2]
   k: (
   l: [Base]
+  a: top
+  o: 0.65
 - p: [9, 10]
   k: )
   l: [Base]
+  a: top
+  o: 0.65
 - p: [18, 20]
   k: {t: \, s: '|'}
+  a: top
+  o: 2.0
 - p: [31, 33]
   k: '|'
+  a: top
+  o: 2.3
+- p: [26, 51]
+  k: $$mdi:alpha-w-box$$
+  a: bottom
+  o: 0.3

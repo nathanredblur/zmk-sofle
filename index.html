@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Eyelash Sofle keymap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root {
+    --bg: #f4f6f8;
+    --card: #ffffff;
+    --ink: #263238;
+    --ink-soft: #546e7a;
+    --line: #e0e6eb;
+    --accent: #1976d2;
+    --combo: #f57f17;
+    --shadow: 0 1px 3px rgba(38, 50, 56, 0.06), 0 4px 24px rgba(38, 50, 56, 0.06);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+  header {
+    padding: 28px 40px;
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+  }
+  header h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+  header p  { margin: 6px 0 0; color: var(--ink-soft); font-size: 14px; }
+  header .controls { margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
+  header button {
+    border: 1px solid var(--line); background: var(--card); color: var(--ink);
+    border-radius: 6px; padding: 6px 12px; font-size: 13px; cursor: pointer;
+    transition: background 120ms ease, border-color 120ms ease;
+  }
+  header button:hover  { background: var(--bg); border-color: #cfd8dc; }
+  header button.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+  main {
+    max-width: 1400px;
+    margin: 24px auto 60px;
+    padding: 24px;
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+  #svg-container { width: 100%; }
+  #svg-container svg { display: block; width: 100%; height: auto; }
+  #status { padding: 60px; text-align: center; color: var(--ink-soft); font-size: 14px; }
+
+  /* Highlight key under cursor */
+  #svg-container svg g.key:hover > rect.key {
+    stroke: var(--accent);
+    stroke-width: 3;
+    filter: drop-shadow(0 2px 6px rgba(25, 118, 210, 0.35));
+    cursor: help;
+  }
+
+  /* Highlight combo box + its dendrons on hover. The dendrons already point
+     visually to the involved keys, so we don't recolour the keys themselves
+     (that would also light them up in every other layer that shares the position). */
+  #svg-container svg g.combo:hover > rect.combo,
+  #svg-container svg g.combo:hover > path.combo {
+    stroke: var(--combo);
+    stroke-width: 3;
+    filter: drop-shadow(0 2px 6px rgba(245, 127, 23, 0.45));
+    cursor: help;
+  }
+  #svg-container svg g.combo:hover > path.combo {
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  /* Floating tooltip */
+  #tooltip {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    background: #263238;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.45;
+    max-width: 320px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 80ms ease, transform 80ms ease;
+  }
+  #tooltip.visible { opacity: 1; transform: translateY(0); }
+  #tooltip .tt-title {
+    font-weight: 700; font-size: 12px;
+    color: #80cbc4;
+    text-transform: uppercase; letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+  #tooltip .tt-row { display: flex; gap: 8px; align-items: baseline; }
+  #tooltip .tt-row .lbl { color: #b0bec5; font-size: 11px; text-transform: uppercase; min-width: 50px; }
+  #tooltip .tt-row .val { color: white; font-weight: 500; }
+  #tooltip .tt-meta { margin-top: 6px; color: #b0bec5; font-size: 11px; font-style: italic; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Eyelash Sofle &mdash; Keymap viewer</h1>
+  <p>Hover over any key or combo to see exactly what it does. Click a layer button to scroll to it.</p>
+  <div class="controls" id="layer-jump">
+    <button data-layer="Base">Base</button>
+    <button data-layer="Nav">Nav</button>
+    <button data-layer="Fn">Fn</button>
+    <button data-layer="Conf">Conf</button>
+    <button data-layer="legend">Legend</button>
+  </div>
+</header>
+
+<main>
+  <div id="status">Loading keymap&hellip;</div>
+  <div id="svg-container" hidden></div>
+</main>
+
+<div id="tooltip" role="tooltip"></div>
+
+<script>
+(async () => {
+  const container = document.getElementById('svg-container');
+  const status = document.getElementById('status');
+  const tooltip = document.getElementById('tooltip');
+
+  /* ---------------------------------------------------------------------
+   * 1. Fetch the SVG inline so the DOM is queryable from this page.
+   * ------------------------------------------------------------------- */
+  let svgText;
+  try {
+    const res = await fetch('keymap-drawer/eyelash_sofle.svg', { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    svgText = await res.text();
+  } catch (err) {
+    status.textContent = 'Could not load keymap-drawer/eyelash_sofle.svg — ' + err.message;
+    return;
+  }
+
+  container.innerHTML = svgText;
+  container.hidden = false;
+  status.hidden = true;
+
+  /* ---------------------------------------------------------------------
+   * 2. Tooltip wiring for every key and combo group.
+   * ------------------------------------------------------------------- */
+  const svg = container.querySelector('svg');
+  if (!svg) return;
+
+  // Make sure the SVG can be styled by our CSS rules.
+  svg.removeAttribute('width');
+  svg.removeAttribute('height');
+
+  const POS_HINT = {
+    0:  'Top-left corner (Esc / Caps Lock mod-tap)',
+    12: 'Top-right corner',
+    37: 'Right pinky home (SEMI). HOLD = ñ (macro)',
+    38: 'Right pinky outer (APOS). HOLD = é (macro)',
+    26: 'Left Shift (mod-tap with LBKT)',
+    51: 'Right Shift (mod-tap with MINUS)',
+  };
+
+  // Pretty names for the most common Material Design icons used in this keymap.
+  // Anything not in this table just falls back to the bare mdi id.
+  const ICON_NAMES = {
+    'mdi:keyboard-esc':           'Escape',
+    'mdi:apple-keyboard-caps':    'Caps Lock',
+    'mdi:apple-keyboard-shift':   'Shift',
+    'mdi:apple-keyboard-control': 'Control',
+    'mdi:apple-keyboard-option':  'Option',
+    'mdi:apple-keyboard-command': 'Command',
+    'mdi:keyboard-tab':           'Tab',
+    'mdi:keyboard-return':        'Enter',
+    'mdi:keyboard-space':         'Space',
+    'mdi:keyboard-backspace':     'Backspace',
+    'mdi:cog':                    'Conf toggle',
+    'mdi:toggle-switch-variant':  'toggle (hold)',
+    'mdi:power-sleep':            'soft-off',
+    'mdi:backup-restore':         'sys-reset',
+    'mdi:progress-download':      'bootloader',
+    'mdi:alpha-w-box':            'caps-word',
+    'mdi:gesture-tap-hold':       'sticky',
+    'mdi:bluetooth-connect':      'BT select',
+    'mdi:bluetooth-off':          'BT clear',
+    'mdi:usb':                    'USB out',
+    'mdi:toggle-switch':          'OUT_TOG',
+    'mdi:led-on':                 'RGB on',
+    'mdi:led-off':                'RGB off',
+    'mdi:palette':                'RGB effect',
+    'mdi:format-color-fill':      'RGB hue',
+    'mdi:invert-colors':          'RGB saturation',
+    'mdi:speedometer':            'RGB speed',
+    'mdi:brightness-5':           'RGB bright+',
+    'mdi:brightness-3':           'RGB bright-',
+    'mdi:menu-right':             'next',
+    'mdi:menu-left':              'previous',
+    'mdi:fast-forward':           'faster',
+    'mdi:camera':                 'screenshot tool',
+    'mdi:crop-free':              'region capture',
+    'mdi:ocr':                    'full-screen capture',
+    'mdi:clipboard-outline':      'to clipboard',
+    'mdi:mouse-left-click-outline':  'left click',
+    'mdi:mouse-right-click-outline': 'right click',
+    'mdi:mouse-scroll-wheel':        'middle click',
+    'mdi:mouse-move-up':           'mouse button 4',
+    'mdi:mouse-move-down':         'mouse button 5',
+    'mdi:mouse':                   'pointer move',
+    'mdi:transfer':                'transparent',
+    'mdi:minus-circle-outline':    'none',
+    'mdi:navigation-variant':      'navigation',
+    'mdi:backspace-reverse-outline': 'word delete',
+  };
+
+  function findClass(g, prefix) {
+    return [...g.classList].find(c => c.startsWith(prefix));
+  }
+
+  function detectLayer(g) {
+    let n = g;
+    while (n && n !== svg) {
+      if (n.classList) {
+        for (const c of n.classList) {
+          if (c.startsWith('layer-')) return c.slice(6);
+        }
+      }
+      n = n.parentNode;
+    }
+    return '';
+  }
+
+  // For each text + use inside a key/combo group, return the visible label and
+  // bucket it under tap / hold / shifted / left / right.
+  function collectLabels(g) {
+    const groups = { tap: [], hold: [], shifted: [], left: [], right: [] };
+    const order = ['tap', 'hold', 'shifted', 'left', 'right'];
+    const children = g.querySelectorAll('text, use');
+    for (const node of children) {
+      const cls = [...node.classList];
+      const bucket = order.find(o => cls.includes(o));
+      if (!bucket) continue;
+      let label;
+      if (node.tagName.toLowerCase() === 'text') {
+        label = node.textContent.trim();
+      } else {
+        const mdi = cls.find(c => c.startsWith('mdi:'));
+        if (!mdi) continue;
+        label = ICON_NAMES[mdi] || mdi.replace('mdi:', '');
+      }
+      if (label) groups[bucket].push(label);
+    }
+    return groups;
+  }
+
+  function rowsHtml(groups) {
+    const out = [];
+    for (const [bucket, vals] of Object.entries(groups)) {
+      if (!vals.length) continue;
+      const label = bucket.charAt(0).toUpperCase() + bucket.slice(1);
+      out.push(
+        `<div class="tt-row"><span class="lbl">${label}</span><span class="val">${esc(vals.join(' / '))}</span></div>`
+      );
+    }
+    return out.join('');
+  }
+
+  function buildKeyTooltip(g) {
+    const posCls = findClass(g, 'keypos-');
+    const pos = posCls ? posCls.replace('keypos-', '') : '?';
+    const layer = detectLayer(g) || 'unknown';
+    const groups = collectLabels(g);
+    const html = rowsHtml(groups);
+    const hint = POS_HINT[pos];
+    return `
+      <div class="tt-title">${esc(layer)} layer &mdash; key ${pos}</div>
+      ${html || '<div class="tt-meta">Transparent / no binding on this layer</div>'}
+      ${hint ? `<div class="tt-meta">${esc(hint)}</div>` : ''}
+    `;
+  }
+
+  function buildComboTooltip(g) {
+    const posCls = findClass(g, 'combopos-');
+    const idx = posCls ? posCls.replace('combopos-', '') : '?';
+    const groups = collectLabels(g);
+    const html = rowsHtml(groups);
+    return `
+      <div class="tt-title">Combo #${esc(idx)}</div>
+      ${html || '<div class="tt-meta">(see SVG)</div>'}
+      <div class="tt-meta">Press both involved keys at the same time.</div>
+    `;
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[c]);
+  }
+
+  let activeNode = null;
+  function showTooltip(html) {
+    tooltip.innerHTML = html;
+    tooltip.classList.add('visible');
+  }
+  function hideTooltip() {
+    tooltip.classList.remove('visible');
+    activeNode = null;
+  }
+  function moveTooltip(evt) {
+    const pad = 14;
+    const tw = tooltip.offsetWidth || 0;
+    const th = tooltip.offsetHeight || 0;
+    let x = evt.clientX + pad;
+    let y = evt.clientY + pad;
+    if (x + tw > window.innerWidth)  x = evt.clientX - pad - tw;
+    if (y + th > window.innerHeight) y = evt.clientY - pad - th;
+    tooltip.style.left = `${Math.max(8, x)}px`;
+    tooltip.style.top  = `${Math.max(8, y)}px`;
+  }
+
+  function attach(g, build) {
+    g.addEventListener('mouseenter', () => {
+      activeNode = g;
+      showTooltip(build(g));
+    });
+    g.addEventListener('mousemove', moveTooltip);
+    g.addEventListener('mouseleave', () => {
+      if (activeNode === g) hideTooltip();
+    });
+  }
+
+  svg.querySelectorAll('g.key').forEach(g => attach(g, buildKeyTooltip));
+  svg.querySelectorAll('g.combo').forEach(g => attach(g, buildComboTooltip));
+
+  /* ---------------------------------------------------------------------
+   * 3. Layer jump buttons scroll to the matching <g> in the SVG.
+   *    Each ZMK layer is rendered as <g class="layer-NAME">.
+   * ------------------------------------------------------------------- */
+  document.getElementById('layer-jump').addEventListener('click', (e) => {
+    const btn = e.target.closest('button[data-layer]');
+    if (!btn) return;
+    const layer = btn.dataset.layer;
+    // Match either `<g class="layer-Base">` (per-layer) or `<g class="legend">` (footer).
+    const target = svg.querySelector(`g.layer-${layer}`) || svg.querySelector(`g.${layer}`);
+    if (target) {
+      const bbox = target.getBoundingClientRect();
+      window.scrollTo({ top: window.scrollY + bbox.top - 110, behavior: 'smooth' });
+      document.querySelectorAll('header button').forEach(b => b.classList.toggle('active', b === btn));
+    }
+  });
+})();
+</script>
+</body>
+</html>

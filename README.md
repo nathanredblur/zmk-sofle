@@ -28,12 +28,44 @@ Date: Jun 19 2021
 - https://keymap-drawer.streamlit.app/
 - https://pictogrammers.com/library/mdi/x
 
-To draw the keyboard use this command
+To draw the keyboard use this helper script (auto-detects `keymap` or falls back to `uvx`):
 ```
-keymap -c ./keymap_drawer.config.yaml parse -z ./config/eyelash_sofle.keymap > ./keymap-drawer/eyelash_sofle.yaml
+./keymap_drawer.sh
+```
 
-keymap -c ./keymap_drawer.config.yaml draw ./keymap-drawer/eyelash_sofle.yaml -j ./config/eyelash_sofle.json > ./keymap-drawer/eyelash_sofle.svg
+The script also runs [`generate_legend.py`](generate_legend.py), which injects a rich legend at the bottom of the SVG with:
+- A **key-anatomy diagram** showing the tap / hold / shifted zones of a single key plus a combo example.
+- Color-coded sections for layer navigation, key colors, RGB controls, macOS modifier glyphs, and the Spanish accent macros.
+- A full **icon glossary** with actual MDI glyphs referenced via `<use>`.
+
+### Interactive HTML viewer
+
+For the best browsing experience, open [`index.html`](index.html) — it loads the SVG inline and adds:
+- **Hover tooltips** that show the tap / hold / shifted bindings (with friendly names for MDI icons) plus a contextual hint for special positions.
+- A sticky header with **layer-jump buttons** (Base / Nav / Fn / Conf / Legend).
+- A subtle highlight ring on the key or combo under the cursor.
+
+Because `index.html` uses `fetch()` to inline-load the SVG, **you need to serve it from a local HTTP server** (browsers block `fetch()` over `file://`):
+```bash
+python3 -m http.server 8765
+# then open http://localhost:8765/index.html
 ```
+
+> The standalone SVG also embeds CSS animations (hover on keys, glow on combos, subtle pulse on the red Esc/Caps key, fade-in on load).
+> Animations only run when the SVG is opened **directly** in a browser, not when embedded as `<img src=...>` (e.g. inline in this README). To see them, open [keymap-drawer/eyelash_sofle.svg](keymap-drawer/eyelash_sofle.svg) in your browser, or use `index.html`.
+
+### Spanish accents (macOS)
+
+`ñ` and `é` are produced by **holding** the right pinky keys on the Base layer (no extra combo, no extra keypress):
+
+| Output | Key                  | Action |
+|--------|----------------------|--------|
+| `;`    | right pinky home     | tap    |
+| `ñ`    | right pinky home     | hold   |
+| `'`    | right pinky outer    | tap    |
+| `é`    | right pinky outer    | hold   |
+
+This is implemented via two custom hold-tap behaviors (`ntilde_ht`, `eacute_ht`) defined in `config/eyelash_sofle.keymap`. Each one wires a parameter-less macro (`&ntilde` / `&eacute`) onto the hold side of a regular `&kp` tap, working around the fact that the stock `&mt` only accepts `&kp` for hold. Internally each macro sends `Option+N` (or `Option+E`) — which on macOS US triggers the tilde / acute dead key — and then taps `N` (or `E`).
 
 # Resources to practice
 - https://agilefingers.com/es/textos/texto-ejemplo

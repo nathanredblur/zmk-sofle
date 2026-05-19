@@ -22,8 +22,10 @@ draw_config:
   inner_pad_h: 1.5
 
   # padding between layers
+  # Note: outer_pad_h needs room for combos with `align: top` (system_combo1,
+  # back_pipe, pipe) so they don't overlap the previous layer.
   outer_pad_w: 0
-  outer_pad_h: 0
+  outer_pad_h: 90
 
   # gap between two halves for ortho layout generator
   # split_gap: 20 # This doesn't seem to have any effect either? 🤔
@@ -409,6 +411,115 @@ draw_config:
         --color--key--border: var(--color--material--teal--100);
     }
 
+  # Extra CSS appended to svg_style. Animations & hover effects only run
+  # when the SVG is opened directly in a browser (not as <img src=...>).
+  # IMPORTANT: avoid the CSS `transform` property here -- it would override the
+  # SVG `transform="translate(...)"` attribute that positions every layer, key
+  # and combo, collapsing the whole diagram into (0,0). Use `filter` (and `opacity`)
+  # for visual effects instead. They compose cleanly with SVG attribute transforms.
+  svg_extra_style: |
+    /* Smooth interactive feel on every key (filter-only, no transform) */
+    g.key {
+        transition: filter 0.18s ease-out;
+    }
+    g.key:hover {
+        filter: drop-shadow(0 3px 5px rgba(0,0,0,0.28)) brightness(1.04);
+        cursor: pointer;
+    }
+
+    /* Combos: glow on hover */
+    g.combo {
+        transition: filter 0.18s ease-out;
+    }
+    g.combo:hover {
+        filter: drop-shadow(0 0 6px var(--color--material--blue--400));
+    }
+
+    /* Subtle pulse on the red Esc/Caps key so users notice the mod-tap */
+    @keyframes subtle-pulse {
+        0%, 100% { opacity: 1; }
+        50%      { opacity: 0.82; }
+    }
+    g.key.keypos-0 rect.key {
+        animation: subtle-pulse 3.2s ease-in-out infinite;
+    }
+
+    /* Soft fade-in when the page loads (opacity-only to avoid transform clash) */
+    @keyframes fade-in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    svg > g {
+        animation: fade-in 0.55s ease-out both;
+    }
+
+    /* Legend (injected by post-processor) */
+    .legend-title {
+        font-weight: 800;
+        font-size: 36px;
+        text-anchor: start;
+        fill: var(--color--material--blue-gray--800);
+    }
+    .legend-section {
+        font-weight: 700;
+        font-size: 20px;
+        text-anchor: start;
+        fill: var(--color--material--blue-gray--700);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+    .legend-item, .legend-row, .legend-note {
+        text-anchor: start;
+        font-size: 15px;
+        fill: var(--color--material--blue-gray--800);
+    }
+    .legend-note {
+        font-size: 13px;
+        fill: var(--color--material--blue-gray--500);
+        font-style: italic;
+    }
+    .legend-row .label {
+        font-weight: 600;
+        fill: var(--color--material--blue-gray--900);
+    }
+    .legend-row .desc {
+        fill: var(--color--material--blue-gray--600);
+    }
+    .legend-divider {
+        stroke: var(--color--material--blue-gray--200);
+        stroke-width: 1.5;
+    }
+    .legend-card {
+        fill: var(--color--material--blue-gray--50);
+        stroke: var(--color--material--blue-gray--100);
+        stroke-width: 1;
+        rx: 8;
+        ry: 8;
+    }
+    .legend-icon {
+        color: var(--color--material--blue-gray--800);
+    }
+    .legend-arrow {
+        stroke: var(--color--material--purple--400);
+        stroke-width: 1.5;
+        fill: none;
+        marker-end: url(#legend-arrowhead);
+    }
+    .legend-arrow-text {
+        font-size: 13px;
+        fill: var(--color--material--purple--600);
+        text-anchor: start;
+        font-style: italic;
+    }
+    .legend-chip-tap   { fill: var(--color--material--blue--500); }
+    .legend-chip-hold  { fill: var(--color--material--teal--500); }
+    .legend-chip-shift { fill: var(--color--material--purple--400); }
+    .legend-chip-combo { fill: var(--color--material--yellow--700); }
+
+  # Legend is rendered by the post-processor (generate_legend.py) into the SVG,
+  # since plain footer_text cannot embed <use> icon references inside <text>.
+  footer_text: ""
+
 parse_config:
   mark_alternate_layer_activators: true
   sticky_label: $$mdi:gesture-tap-hold$$
@@ -443,7 +554,7 @@ parse_config:
     "&kp LS(LG(N5))":
       tap: $$mdi:camera$$
       
-    # RGB Controls
+    # RGB Controls — see Legend for what each acronym means
     "&rgb_ug RGB_TOG":
       tap: $$mdi:led-on$$
     "&rgb_ug RGB_ON":
@@ -459,10 +570,30 @@ parse_config:
     "&rgb_ug RGB_SPI":
       tap: $$mdi:speedometer$$
       shifted: $$mdi:fast-forward$$
+    # Brightness — use the same sun icon for both so they look related,
+    # then differentiate with a B+/B- hold label. The previous BRD icon
+    # (mdi:brightness-3) was a crescent moon and was easily confused with
+    # the soft-off moon (mdi:power-sleep).
     "&rgb_ug RGB_BRI":
       tap: $$mdi:brightness-5$$
+      hold: B+
     "&rgb_ug RGB_BRD":
-      tap: $$mdi:brightness-3$$
+      tap: $$mdi:brightness-5$$
+      hold: B-
+    # Hue = posición en la rueda de color (rojo→verde→azul→rojo)
+    "&rgb_ug RGB_HUI":
+      tap: $$mdi:format-color-fill$$
+      hold: H+
+    "&rgb_ug RGB_HUD":
+      tap: $$mdi:format-color-fill$$
+      hold: H-
+    # Saturation = intensidad del color (0 = blanco, max = puro)
+    "&rgb_ug RGB_SAI":
+      tap: $$mdi:invert-colors$$
+      hold: S+
+    "&rgb_ug RGB_SAD":
+      tap: $$mdi:invert-colors$$
+      hold: S-
       
     # Home rows
     "&hm LEFT_GUI A":
@@ -588,6 +719,29 @@ parse_config:
       tap: $$mdi:backup-restore$$
     "&bootloader":
       tap: $$mdi:progress-download$$
+    "&soft_off":
+      tap: $$mdi:power-sleep$$
+
+    # Spanish accent macros (defined in the keymap; one shot outputs ñ / é on macOS US layout)
+    "&ntilde":
+      tap: ñ
+    "&eacute":
+      tap: é
+
+    # Hold-tap variants that put the macro on the hold side.
+    # Tap = the keycode argument, Hold = the corresponding accented vowel macro.
+    "&ntilde_ht SEMI":
+      tap: ;
+      hold: ñ
+    "&ntilde_ht APOS":
+      tap: "'"
+      hold: ñ
+    "&eacute_ht APOS":
+      tap: "'"
+      hold: é
+    "&eacute_ht SEMI":
+      tap: ;
+      hold: é
 
   # ZMK
   zmk_keycode_map:
@@ -865,37 +1019,48 @@ parse_config:
       hold: zoom
 
   zmk_combos:
-    combo_to_2:
+    # Conf toggle combo (positions 0+1) - gear icon = settings
+    system_combo1:
+      key:
+        tap: $$mdi:cog$$
+        hold: $$mdi:toggle-switch-variant$$
       align: top
-    combo_to_3:
+      offset: 0.2
+
+    # Combos that span across the central joystick cross need to be pushed
+    # well above the keyboard so their dendrons don't collide with the joystick
+    # directional keys (positions 6, 19, 32, 45).
+    # back_pipe (T+Y, row 1) and pipe (G+H, row 2) end up in the same vertical
+    # band so we stack them: back_pipe goes ABOVE pipe with a clear gap.
+    back_pipe:
       align: top
-    combo_bt_clear:
+      offset: 2.0   # combo 7 (\) — sits above pipe
+    pipe:
       align: top
-      offset: 0.03
-    combo_mute:
+      offset: 2.3   # combo 8 (|) — just above the joystick UP key
+
+    # Separate the stacked bracket / brace / paren combos so they read clearly.
+    left_brace:
       align: top
       offset: 0.15
-    combo_minus:
-      key:
-        shifted: "_"
-        hold: "-"
-    combo_equal:
-      key:
-        shifted: "+"
-        hold: "="
-    combo_backslash:
-      key:
-        shifted: "|"
-        hold: \
-    combo_lbkt:
-      key:
-        shifted: "{"
-        hold: "["
-    combo_rbkt:
-      key:
-        shifted: "}"
-        hold: "]"
-    combo_semicolon:
-      key:
-        shifted: ":"
-        hold: ";"
+    right_brace:
+      align: top
+      offset: 0.15
+    left_bracket:
+      align: top
+      offset: 0.4
+    right_bracket:
+      align: top
+      offset: 0.4
+    left_parent:
+      align: top
+      offset: 0.65
+    right_parent:
+      align: top
+      offset: 0.65
+
+    # caps_word combo: both shifts (positions 26+51) - draw below the row
+    caps_word_combo:
+      align: bottom
+      offset: 0.3
+
