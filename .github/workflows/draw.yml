@@ -1,18 +1,49 @@
 name: Draw Keymap
+
 on:
   workflow_dispatch:
   push:
     paths:
+      # Anything that affects the rendered keymap. We intentionally do NOT
+      # trigger on changes under `keymap-drawer/**` so the auto-commit step
+      # below cannot retrigger this workflow in a loop.
       - "config/**"
-      - .github/workflows/draw.yml
-      - keymap_drawer.config.yaml
+      - "keymap_drawer.config.yaml"
+      - "keymap_drawer.sh"
+      - "generate_legend.py"
+      - ".github/workflows/draw.yml"
 
 jobs:
   draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    runs-on: ubuntu-latest
     permissions:
       contents: write
-    with:
-      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
-      destination: "commit"
-      fail_on_error: ${{ fromJSON(true) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Use the workflow's own token so the follow-up commit step can
+          # push back to the same branch.
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install keymap-drawer
+        run: pip install keymap-drawer
+
+      - name: Generate SVG + YAML
+        run: |
+          chmod +x ./keymap_drawer.sh
+          ./keymap_drawer.sh
+
+      - name: Commit regenerated artifacts
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[Draw] ${{ github.event.head_commit.message }}"
+          file_pattern: "keymap-drawer/eyelash_sofle.svg keymap-drawer/eyelash_sofle.yaml"
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
