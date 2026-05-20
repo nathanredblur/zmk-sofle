@@ -56,16 +56,20 @@ python3 -m http.server 8765
 
 ### Spanish accents (macOS)
 
-`ñ` and `é` are produced by **holding** the right pinky keys on the Base layer (no extra combo, no extra keypress):
+The right pinky keys on the Base layer use plain `&mt` (mod-tap) to arm the macOS dead keys on hold. Typing an accented vowel is a two-step flow:
 
-| Output | Key                  | Action |
-|--------|----------------------|--------|
-| `;`    | right pinky home     | tap    |
-| `ñ`    | right pinky home     | hold   |
-| `'`    | right pinky outer    | tap    |
-| `é`    | right pinky outer    | hold   |
+| Key                | Tap | Hold (one shot)        | Then tap a vowel to compose                   |
+|--------------------|-----|------------------------|-----------------------------------------------|
+| right pinky home   | `;` | `Option+N` (tilde `~`) | `n` → `ñ`, `a/e/i/o/u` → `ã / ẽ / ĩ / õ / ũ`  |
+| right pinky outer  | `'` | `Option+E` (acute `´`) | `a` → `á`, `e` → `é`, `i/o/u` → `í / ó / ú`   |
 
-This is implemented via two custom hold-tap behaviors (`ntilde_ht`, `eacute_ht`) defined in `config/eyelash_sofle.keymap`. Each one wires a parameter-less macro (`&ntilde` / `&eacute`) onto the hold side of a regular `&kp` tap, working around the fact that the stock `&mt` only accepts `&kp` for hold. Internally each macro sends `Option+N` (or `Option+E`) — which on macOS US triggers the tilde / acute dead key — and then taps `N` (or `E`).
+Bindings in `config/eyelash_sofle.keymap`:
+
+```
+&mt LA(N) SEMI     &mt LA(E) APOS
+```
+
+This relies on the macOS US keyboard layout (Option+N = tilde dead key, Option+E = acute dead key). On other OSes the hold simply sends `Option+N` / `Option+E` and the dead-key behavior won't apply.
 
 # Resources to practice
 - https://agilefingers.com/es/textos/texto-ejemplo

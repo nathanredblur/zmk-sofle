@@ -722,27 +722,16 @@ parse_config:
     "&soft_off":
       tap: $$mdi:power-sleep$$
 
-    # Spanish accent macros (defined in the keymap; one shot outputs ñ / é on macOS US layout)
-    "&ntilde":
-      tap: ñ
-    "&eacute":
-      tap: é
-
-    # Hold-tap variants that put the macro on the hold side. The first
-    # numeric arg is an ignored dummy (required by the hold-tap 2-cell spec);
-    # the second is the tap-side keycode.
-    "&ntilde_ht 0 SEMI":
+    # Spanish accents — on macOS US layout the dead keys are Option+N (tilde)
+    # and Option+E (acute). The keymap puts these on the right pinky via
+    # plain `&mt`: tap = `;` / `'`, hold = arm the dead key, then tap a
+    # vowel to compose ñ / é / á / í / ó / ú.
+    "&mt LA(N) SEMI":
       tap: ;
-      hold: ñ
-    "&ntilde_ht 0 APOS":
+      hold: '~'
+    "&mt LA(E) APOS":
       tap: "'"
-      hold: ñ
-    "&eacute_ht 0 APOS":
-      tap: "'"
-      hold: é
-    "&eacute_ht 0 SEMI":
-      tap: ;
-      hold: é
+      hold: '´'
 
   # ZMK
   zmk_keycode_map:

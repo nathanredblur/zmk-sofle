@@ -98,9 +98,10 @@ MAC_MODS = "\u2318 Cmd   \u2325 Option   \u2303 Control   \u21e7 Shift   \u21ea 
 
 
 SPANISH_NOTE_LINES = [
-    "Holding the SEMI / APOS keys fires a macro that sends Option+N (or",
-    "Option+E) \u2014 the macOS tilde / acute dead key \u2014 and then the vowel.",
-    "Result: one hold \u2192 one accented vowel, no extra keypress needed.",
+    "Two-step dead-key flow (macOS US layout):",
+    "  1. HOLD SEMI (;) to send Option+N \u2014 arms the tilde dead key (~).",
+    "     HOLD APOS (') to send Option+E \u2014 arms the acute dead key (\u00b4).",
+    "  2. Release, then TAP a vowel: n \u2192 \u00f1, a/e/i/o/u \u2192 \u00e1 / \u00e9 / \u00ed / \u00f3 / \u00fa.",
 ]
 
 
@@ -322,14 +323,14 @@ def render_spanish(x: float, y: float, width: float) -> tuple[str, float]:
     parts: list[str] = [section_title(x, y, "Spanish accents (macOS)")]
     parts.append(
         f'<text x="{x:.1f}" y="{y + 32:.1f}" class="legend-row">'
-        f'<tspan class="label">\u00f1</tspan>'
-        f'<tspan class="desc" dx="12">HOLD the SEMI (;) key  \u2014 right pinky home</tspan>'
+        f'<tspan class="label">~</tspan>'
+        f'<tspan class="desc" dx="12">HOLD SEMI (;) \u2014 then tap N for \u00f1 (right pinky home)</tspan>'
         f'</text>'
     )
     parts.append(
         f'<text x="{x:.1f}" y="{y + 56:.1f}" class="legend-row">'
-        f'<tspan class="label">\u00e9</tspan>'
-        f'<tspan class="desc" dx="12">HOLD the APOS (\u2019) key  \u2014 right pinky outer</tspan>'
+        f'<tspan class="label">\u00b4</tspan>'
+        f'<tspan class="desc" dx="12">HOLD APOS (\u2019) \u2014 then tap E for \u00e9 (right pinky outer)</tspan>'
         f'</text>'
     )
     # Wrap the long note across multiple lines (SVG <text> doesn't auto-wrap).

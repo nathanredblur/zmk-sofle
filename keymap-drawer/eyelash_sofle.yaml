@@ -38,8 +38,8 @@ layers:
   - J
   - K
   - L
-  - {t: ;, h: ñ}
-  - {t: '''', h: é}
+  - {t: ;, h: '~'}
+  - {t: '''', h: ´}
   - {t: '`', h: '$$mdi:apple-keyboard-shift$$', s: '~'}
   - Z
   - X
