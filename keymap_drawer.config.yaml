@@ -728,18 +728,19 @@ parse_config:
     "&eacute":
       tap: é
 
-    # Hold-tap variants that put the macro on the hold side.
-    # Tap = the keycode argument, Hold = the corresponding accented vowel macro.
-    "&ntilde_ht SEMI":
+    # Hold-tap variants that put the macro on the hold side. The first
+    # numeric arg is an ignored dummy (required by the hold-tap 2-cell spec);
+    # the second is the tap-side keycode.
+    "&ntilde_ht 0 SEMI":
       tap: ;
       hold: ñ
-    "&ntilde_ht APOS":
+    "&ntilde_ht 0 APOS":
       tap: "'"
       hold: ñ
-    "&eacute_ht APOS":
+    "&eacute_ht 0 APOS":
       tap: "'"
       hold: é
-    "&eacute_ht SEMI":
+    "&eacute_ht 0 SEMI":
       tap: ;
       hold: é
 

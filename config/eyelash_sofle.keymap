@@ -39,17 +39,21 @@
     };
 
     behaviors {
-        // Custom hold-tap variants that put a macro on the hold side. We need
-        // these because the stock `&mt` only accepts `&kp` for its hold binding,
-        // and we want HOLD on the right pinky to directly type ñ / é instead of
-        // only the Option+N / Option+E dead key.
+        // Custom hold-tap variants that put a macro on the hold side. The stock
+        // `&mt` only accepts `&kp` for hold, so we need a custom one if we want
+        // HOLD on the right pinky to directly type ñ / é instead of just the
+        // Option+N / Option+E dead key.
         //
-        // How the binding cells line up: the inner macros take 0 params and `&kp`
-        // takes 1 param, so the hold-tap exposes 1 cell which is forwarded to the
-        // tap-side `&kp` (the macros ignore parameters).
+        // The `zmk,behavior-hold-tap` binding has `#binding-cells = <2>` as a
+        // CONST, so both inner bindings must accept exactly one cell. The
+        // tap-side `&kp` already takes one cell. For the hold side we make the
+        // macro a `behavior-macro-one-param` so it also accepts a cell — we
+        // never reference the param inside the macro, so it's effectively a
+        // dummy. Usage in the keymap is `&ntilde_ht 0 SEMI` (the 0 is the
+        // ignored dummy, SEMI is the tap keycode).
         ntilde_ht: ntilde_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&ntilde>, <&kp>;
@@ -57,7 +61,7 @@
 
         eacute_ht: eacute_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             bindings = <&eacute>, <&kp>;
@@ -68,17 +72,19 @@
         // Spanish accents — work on macOS with the standard US keyboard layout
         // (where Option+N is the tilde dead-key and Option+E is the acute dead-key).
         // We send the dead key + the vowel in one shot, so a single hold outputs ñ / é.
+        // Declared as one-param macros (with the param ignored) so they can sit on
+        // the hold side of a hold-tap; see the comment on ntilde_ht above.
         ntilde: ntilde {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             wait-ms = <8>;
             tap-ms = <10>;
             bindings = <&kp LA(N)>, <&kp N>;
         };
 
         eacute: eacute {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             wait-ms = <8>;
             tap-ms = <10>;
             bindings = <&kp LA(E)>, <&kp E>;
@@ -152,7 +158,7 @@
             bindings = <
 &mt CAPSLOCK ESCAPE   &kp N1     &kp N2        &kp N3        &kp N4  &kp N5       &kp UP_ARROW     &kp N6         &kp N7     &kp N8     &kp N9            &kp N0             &kp EQUAL
 &kp TAB               &kp Q      &kp W         &kp E         &kp R   &kp T        &kp DOWN_ARROW   &kp Y          &kp U      &kp I      &kp O             &kp P              &to 1
-&kp LSHFT             &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H          &kp J      &kp K      &kp L             &ntilde_ht SEMI    &eacute_ht APOS
+&kp LSHFT             &kp A      &kp S         &kp D         &kp F   &kp G        &kp LEFT_ARROW   &kp H          &kp J      &kp K      &kp L             &ntilde_ht 0 SEMI  &eacute_ht 0 APOS
 &mt LEFT_SHIFT GRAVE  &kp Z      &kp X         &kp C         &kp V   &kp B        &kp RIGHT_ARROW  &kp N          &kp M      &kp COMMA  &kp DOT           &kp FSLH           &mt RIGHT_SHIFT MINUS
 &kp C_MUTE            &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &mo 1   &kp ENTER    &kp ENTER        &kp BACKSPACE  &kp SPACE  &mo 2      &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
