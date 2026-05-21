@@ -684,22 +684,37 @@ parse_config:
       tap: $$mdi:backspace$$
       shifted: $$mdi:backspace-reverse-outline$$
 
-    # Bluetooth
+    # Bluetooth — the macros below pick a BT profile AND auto-return to the
+    # Base layer (defined as `btN_to_base` in the keymap). The plain
+    # `&bt BT_SEL N` mappings are kept as a reference in case the macros
+    # are ever swapped back.
+    "&bt0_to_base":
+      shifted: 1
+      tap: $$mdi:bluetooth-connect$$
+    "&bt1_to_base":
+      shifted: 2
+      tap: $$mdi:bluetooth-connect$$
+    "&bt2_to_base":
+      shifted: 3
+      tap: $$mdi:bluetooth-connect$$
+    "&bt3_to_base":
+      shifted: 4
+      tap: $$mdi:bluetooth-connect$$
     "&bt BT_SEL 0":
       shifted: 1
-      tap: $$mdi:bluetooth-connect$$ 
+      tap: $$mdi:bluetooth-connect$$
     "&bt BT_SEL 1":
       shifted: 2
-      tap: $$mdi:bluetooth-connect$$ 
+      tap: $$mdi:bluetooth-connect$$
     "&bt BT_SEL 2":
       shifted: 3
-      tap: $$mdi:bluetooth-connect$$ 
+      tap: $$mdi:bluetooth-connect$$
     "&bt BT_SEL 3":
       shifted: 4
-      tap: $$mdi:bluetooth-connect$$ 
+      tap: $$mdi:bluetooth-connect$$
     "&bt BT_SEL 4":
       shifted: 5
-      tap: $$mdi:bluetooth-connect$$ 
+      tap: $$mdi:bluetooth-connect$$
     "&out OUT_TOG":
       shifted: $$mdi:usb$$
       tap: $$mdi:toggle-switch$$

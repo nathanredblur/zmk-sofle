@@ -41,6 +41,35 @@
     behaviors {
     };
 
+    macros {
+        // BT profile pickers that auto-exit the Conf layer back to Base after
+        // selecting a profile. The Conf layer is only used for occasional
+        // setup, so once you pick a connection you almost always want to start
+        // typing immediately — no need to leave Conf manually with the combo.
+        // (BT_CLR is left untouched so you can clear bonds and then pick a new
+        // slot without bouncing in and out of Conf.)
+        bt0_to_base: bt0_to_base {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&to 0>;
+        };
+        bt1_to_base: bt1_to_base {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1>, <&to 0>;
+        };
+        bt2_to_base: bt2_to_base {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>, <&to 0>;
+        };
+        bt3_to_base: bt3_to_base {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 3>, <&to 0>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -145,7 +174,7 @@
 
         Configurations {
             bindings = <
-&out OUT_TOG     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_CLR     &none  &none        &none  &none  &none   &none  &none
+&out OUT_TOG     &bt0_to_base     &bt1_to_base     &bt2_to_base     &bt3_to_base     &bt BT_CLR     &none  &none        &none  &none  &none   &none  &none
 &none            &none            &none            &none            &none            &bootloader    &none  &bootloader  &none  &none  &none   &none  &none
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &sys_reset     &none  &sys_reset   &none  &none  &none   &none  &none
 &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &soft_off      &none  &soft_off    &none  &none  &none   &none  &none
