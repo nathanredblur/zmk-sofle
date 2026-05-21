@@ -48,25 +48,29 @@
         // typing immediately — no need to leave Conf manually with the combo.
         // (BT_CLR is left untouched so you can clear bonds and then pick a new
         // slot without bouncing in and out of Conf.)
+
         bt0_to_base: bt0_to_base {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0>, <&to 0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
         };
+
         bt1_to_base: bt1_to_base {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1>, <&to 0>;
+            bindings = <&bt BT_SEL 1 &to 0>;
         };
+
         bt2_to_base: bt2_to_base {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2>, <&to 0>;
+            bindings = <&bt BT_SEL 2 &to 0>;
         };
+
         bt3_to_base: bt3_to_base {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3>, <&to 0>;
+            bindings = <&bt BT_SEL 3 &to 0>;
         };
     };
 
@@ -148,11 +152,11 @@
 
         Navigation {
             bindings = <
-&trans      &kp F1          &kp F2            &kp F3          &kp F4                         &kp F5      &mmv MOVE_UP     &kp F6                  &kp F7              &kp F8               &kp F9                   &kp F10  &kp F11
-&trans      &none           &mkp LCLK         &mkp MCLK       &mkp RCLK                      &mkp MB4    &mmv MOVE_DOWN   &kp HOME                &kp PAGE_DOWN       &kp PG_UP            &kp END                  &kp F12  &to 2
-&trans      &none           &kp LS(LG(N5))    &kp LS(LG(N3))  &mt LS(LC(LG(N4))) LS(LG(N4))  &mkp MB5    &mmv MOVE_LEFT   &kp LEFT                &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT_ARROW          &trans   &trans
-&trans      &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT    &sk LEFT_GUI                   &trans      &mmv MOVE_RIGHT  &kp LA(LC(LEFT_ARROW))  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LA(LC(RIGHT_ARROW))  &trans   &trans
-&kp C_MUTE  &trans          &trans            &trans          &trans                         &trans      &mkp LCLK        &trans                  &trans              &trans               &trans                   &trans
+&trans      &kp F1          &kp F2            &kp F3                &kp F4                         &kp F5      &mmv MOVE_UP     &kp F6                  &kp F7              &kp F8               &kp F9                   &kp F10  &kp F11
+&trans      &none           &trans            &kp LG(LS(NUMBER_5))  &mt LS(LG(N4)) LS(LG(LA(N4)))  &trans      &mmv MOVE_DOWN   &kp HOME                &kp PAGE_DOWN       &kp PG_UP            &kp END                  &kp F12  &to 2
+&trans      &none           &trans            &kp LG(GRAVE)         &kp LG(TAB)                    &mkp MB5    &mmv MOVE_LEFT   &kp LEFT                &kp DOWN_ARROW      &kp UP_ARROW         &kp RIGHT_ARROW          &trans   &trans
+&trans      &sk LEFT_SHIFT  &sk LEFT_CONTROL  &sk LEFT_ALT          &sk LEFT_GUI                   &trans      &mmv MOVE_RIGHT  &kp LA(LC(LEFT_ARROW))  &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LA(LC(RIGHT_ARROW))  &trans   &trans
+&kp C_MUTE  &trans          &trans            &trans                &trans                         &trans      &mkp LCLK        &trans                  &trans              &trans               &trans                   &trans
             >;
 
             display-name = "Nav";
